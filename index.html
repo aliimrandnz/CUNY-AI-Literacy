@@ -106,13 +106,13 @@
         <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
             <div class="text-xl font-bold tracking-tighter text-[#00216f] dark:text-[#ffffff]">CUNY AI Literacy</div>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-[#00216f] dark:text-[#feb71a] font-bold border-b-2 border-[#feb71a] pb-1 font-['Inter'] font-medium tracking-tight"
+                <a class="nav-link active text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#">Overview</a>
-                <a class="text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#sessions">Sessions</a>
-                <a class="text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#speakers">Speakers</a>
-                <a class="text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#leadership">Leadership</a>
                 <button
                     class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-primary-container">Join
@@ -380,6 +380,41 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Active nav link handling
+        const navLinks = document.querySelectorAll('.nav-link');
+        const activeClasses = ['text-[#00216f]', 'font-bold', 'border-[#feb71a]'];
+        const inactiveClasses = ['text-[#444653]', 'border-transparent'];
+
+        function setActive(link) {
+            navLinks.forEach(l => {
+                l.classList.remove('active', ...activeClasses);
+                inactiveClasses.forEach(c => l.classList.add(c));
+            });
+            link.classList.add('active', ...activeClasses);
+            link.classList.remove(...inactiveClasses);
+        }
+
+        // Set initial active state
+        setActive(document.querySelector('.nav-link.active'));
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => setActive(link));
+        });
+
+        // Also update active link on scroll
+        const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (s.el.getBoundingClientRect().top <= 120) current = s.id;
+            });
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').replace('#', '');
+                if (href === current) setActive(link);
+            });
+        });
+    </script>
 </body>
 
 </html>
