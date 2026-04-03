@@ -105,9 +105,9 @@
     <nav id="mainNav" class="fixed top-0 w-full z-50 bg-transparent shadow-none transition-all duration-300">
         <div id="navContainer" class="flex justify-between items-center px-8 h-24 max-w-7xl mx-auto transition-all duration-300">
             <!-- Logos -->
-            <a href="#" class="relative flex items-center h-full w-[200px] sm:w-[280px]">
-                <img id="logoFull" src="assets/cuny_logo_full_white.png" alt="CUNY Logo" class="absolute left-0 w-full object-contain transition-opacity duration-300 opacity-100" />
-                <img id="logoCompact" src="assets/cuny_logo_block_white.png" alt="CUNY Block Logo" class="absolute left-0 w-11 sm:w-14 object-contain transition-opacity duration-300 opacity-0 pointer-events-none" />
+            <a href="#" class="relative flex items-center h-full w-[260px] md:w-[320px]">
+                <img id="logoFull" src="assets/cuny_logo_full_white.png" alt="CUNY Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-10 md:h-12 w-auto object-contain transition-opacity duration-300 opacity-100" />
+                <img id="logoCompact" src="assets/cuny_logo_block_white.png" alt="CUNY Block Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-10 md:h-12 w-auto object-contain transition-opacity duration-300 opacity-0 pointer-events-none" />
             </a>
             <div class="hidden md:flex items-center gap-8">
                 <a class="nav-link active text-white hover:text-white transition-all duration-300 font-['Inter'] font-bold tracking-tight cursor-pointer border-b-2 border-[#feb71a] pb-1"
@@ -118,7 +118,7 @@
                     href="#speakers">Speakers</a>
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#leadership">Leadership</a>
-                <button class="bg-[#feb71a] text-[#1D3A83] px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-[#ffc94d]">Join Series</button>
+                <button class="bg-[#feb71a] text-[#0033A1] px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-[#ffc94d]">Join Series</button>
             </div>
             <button class="md:hidden text-white hover:text-gray-200">
                 <span class="material-symbols-outlined">menu</span>
@@ -776,14 +776,14 @@
             // Header sticky transition
             if (window.scrollY > 50) {
                 mainNav.classList.remove('bg-transparent', 'shadow-none');
-                mainNav.classList.add('bg-[#1D3A83]', 'shadow-md');
+                mainNav.classList.add('bg-[#0033A1]', 'shadow-md');
                 navContainer.classList.remove('h-24');
                 navContainer.classList.add('h-16');
                 logoFull.classList.replace('opacity-100', 'opacity-0');
                 logoCompact.classList.replace('opacity-0', 'opacity-100');
             } else {
                 mainNav.classList.add('bg-transparent', 'shadow-none');
-                mainNav.classList.remove('bg-[#1D3A83]', 'shadow-md');
+                mainNav.classList.remove('bg-[#0033A1]', 'shadow-md');
                 navContainer.classList.add('h-24');
                 navContainer.classList.remove('h-16');
                 logoFull.classList.replace('opacity-0', 'opacity-100');
