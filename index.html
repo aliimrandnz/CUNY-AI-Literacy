@@ -102,28 +102,30 @@
 
 <body class="bg-background text-on-surface selection:bg-[#a8c7fa] selection:text-[#00216f]">
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <div class="text-xl font-bold tracking-tighter text-[#00216f] dark:text-[#ffffff]">CUNY AI Literacy</div>
+    <nav id="mainNav" class="fixed top-0 w-full z-50 bg-transparent shadow-none transition-all duration-300">
+        <div id="navContainer" class="flex justify-between items-center px-8 h-24 max-w-7xl mx-auto transition-all duration-300">
+            <!-- Logos -->
+            <a href="#" class="relative flex items-center h-full w-[200px] sm:w-[280px]">
+                <img id="logoFull" src="assets/CUNY_Name/lockup – right/White/CUNY_Logo_with Name_Right_White_RGB.png" alt="CUNY Logo" class="absolute left-0 w-full object-contain transition-opacity duration-300 opacity-100" />
+                <img id="logoCompact" src="assets/CUNY_Block/White/CUNY_Logo_White_RGB.png" alt="CUNY Block Logo" class="absolute left-0 w-11 sm:w-14 object-contain transition-opacity duration-300 opacity-0 pointer-events-none" />
+            </a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="nav-link active text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link active text-white hover:text-white transition-all duration-300 font-['Inter'] font-bold tracking-tight cursor-pointer border-b-2 border-[#feb71a] pb-1"
                     href="#">Overview</a>
-                <a class="nav-link text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#sessions">Sessions</a>
-                <a class="nav-link text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#speakers">Speakers</a>
-                <a class="nav-link text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
+                <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#leadership">Leadership</a>
-                <button
-                    class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-primary-container">Join
-                    Series</button>
+                <button class="bg-[#feb71a] text-[#003366] px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-[#ffc94d]">Join Series</button>
             </div>
-            <button class="md:hidden text-primary">
+            <button class="md:hidden text-white hover:text-gray-200">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
     </nav>
-    <main class="pt-20">
+    <main>
         <!-- Hero Section -->
         <section class="relative min-h-[870px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
@@ -132,7 +134,7 @@
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Yfs_xLSGI3F6rKCOEoA1ZHIpPFOIJOLDNsOODP_sp-QbPsqfUXT6hrRXlevWhovBt1haQk4ND0Ajoy_8lFPUrFoxSSGZ63yyJyE-G7pmXHZH-qbXU9U4FRtxbWu0Mx0HFDsql4Pmd9xyrSpaXdcSnL5_y3mtxAhUX61xLypHaZqSTAyqKy-eqF2IaZ1GBHX1WpanYaunf7zH8HjsWNH_xjD-kHOdg3ghFWnf5tDqzo1hvsUltD2tanw0EZwqW8tkEK5gSs7si8c" />
                 <div class="absolute inset-0 hero-overlay"></div>
             </div>
-            <div class="relative z-10 max-w-7xl mx-auto px-8 py-20 text-on-primary text-center md:text-left">
+            <div class="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-20 text-on-primary text-center md:text-left">
                 <div class="max-w-4xl">
                     <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
                         CUNY AI Literacy and Professional Readiness Series
@@ -155,26 +157,43 @@
         </section>
         <!-- Impact Section (Stats Bar) -->
         <section class="relative z-20 -mt-16 max-w-6xl mx-auto px-4 sm:px-8">
-            <div class="bg-outline-variant/20 shadow-2xl shadow-primary/10 rounded-xl grid grid-cols-2 md:grid-cols-4 gap-px overflow-hidden">
-                <div class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
+            <div
+                class="bg-outline-variant/20 shadow-2xl shadow-primary/10 rounded-xl grid grid-cols-2 md:grid-cols-4 gap-px overflow-hidden">
+                <div
+                    class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
                     <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">groups</span>
                     <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">800+</div>
-                    <div class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">Students reached<br class="hidden md:block"> across CUNY and NYU</div>
+                    <div
+                        class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
+                        Students reached<br class="hidden md:block"> across CUNY and NYU</div>
                 </div>
-                <div class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">sentiment_satisfied</span>
+                <div
+                    class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
+                    <span
+                        class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">sentiment_satisfied</span>
                     <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">94%</div>
-                    <div class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">Student satisfaction</div>
+                    <div
+                        class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
+                        Student satisfaction</div>
                 </div>
-                <div class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">event_available</span>
+                <div
+                    class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
+                    <span
+                        class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">event_available</span>
                     <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">217</div>
-                    <div class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">RSVPs for flagship CUNY × NYU session</div>
+                    <div
+                        class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
+                        RSVPs for flagship CUNY × NYU session</div>
                 </div>
-                <div class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
+                <div
+                    class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
                     <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">hub</span>
-                    <div class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-primary mb-1 md:mb-2 tracking-tight">Cross-campus</div>
-                    <div class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">Participation and collaboration</div>
+                    <div
+                        class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-primary mb-1 md:mb-2 tracking-tight">
+                        Cross-campus</div>
+                    <div
+                        class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
+                        Participation and collaboration</div>
                 </div>
             </div>
         </section>
@@ -206,7 +225,8 @@
             <div class="max-w-7xl mx-auto px-8">
                 <div class="text-center mb-16">
                     <div class="max-w-2xl mx-auto">
-                        <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Spring 2026 Curriculum</span>
+                        <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Spring 2026
+                            Curriculum</span>
                         <h2 class="text-5xl font-black text-primary tracking-tighter">Featured Sessions</h2>
                     </div>
                 </div>
@@ -234,52 +254,76 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- February -->
                     <div class="space-y-6">
-                        <div class="bg-primary text-white py-3 px-6 rounded-lg font-bold text-lg inline-block">February</div>
+                        <div class="bg-primary text-white py-3 px-6 rounded-lg font-bold text-lg inline-block">February
+                        </div>
                         <div class="space-y-4">
                             <!-- Feb 1 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Poe Myint Swe</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">AI-Powered Professional Branding</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Feb 10 (Virtual)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Reached 135 attendees across three sessions, focusing on LinkedIn optimization and AI-assisted job search.</p>
+                                            <p class="text-sm font-semibold text-primary">AI-Powered Professional
+                                                Branding</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Feb 10
+                                                (Virtual)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Reached 135
+                                                attendees across three sessions, focusing on LinkedIn optimization and
+                                                AI-assisted job search.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Feb 2 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Hannah Frey</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">AI in Business &amp; Marketing</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Feb 26 (In-person + Virtual)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Engaged 67 in-person and 26 virtual participants, introducing real enterprise AI tools and use cases.</p>
+                                            <p class="text-sm font-semibold text-primary">AI in Business &amp; Marketing
+                                            </p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Feb 26
+                                                (In-person + Virtual)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Engaged 67
+                                                in-person and 26 virtual participants, introducing real enterprise AI
+                                                tools and use cases.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Feb 3 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
-                                    <span class="font-bold text-on-surface text-left pr-4">Conor &amp; Finn Grennan</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                    <span class="font-bold text-on-surface text-left pr-4">Conor &amp; Finn
+                                        Grennan</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">Artificial Intelligence &amp; the Future of Work</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Feb 19</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Drew 118 participants, exploring AI mindset, Gen Z perspectives, and career implications. Conor is a NYT bestselling author and CEO of AI Mindset.</p>
+                                            <p class="text-sm font-semibold text-primary">Artificial Intelligence &amp;
+                                                the Future of Work</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Feb 19
+                                            </p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Drew 118
+                                                participants, exploring AI mindset, Gen Z perspectives, and career
+                                                implications. Conor is a NYT bestselling author and CEO of AI Mindset.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -288,68 +332,97 @@
                     </div>
                     <!-- March -->
                     <div class="space-y-6">
-                        <div class="bg-primary text-white py-3 px-6 rounded-lg font-bold text-lg inline-block">March</div>
+                        <div class="bg-primary text-white py-3 px-6 rounded-lg font-bold text-lg inline-block">March
+                        </div>
                         <div class="space-y-4">
                             <!-- Mar 1 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Dr. Claudio Schapsis</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">Advanced Prompt Engineering &amp; AI Tools</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">March 3</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Engaged 130+ students across multiple sessions, with hands-on training in responsible AI use for research and coursework.</p>
+                                            <p class="text-sm font-semibold text-primary">Advanced Prompt Engineering
+                                                &amp; AI Tools</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">March
+                                                3</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Engaged 130+
+                                                students across multiple sessions, with hands-on training in responsible
+                                                AI use for research and coursework.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Mar 2 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Paul Santello</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">AI in Marketing &amp; Advertising</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">March 5</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Drew 78 attendees, focusing on real-world applications across creative, strategy, and campaign workflows.</p>
+                                            <p class="text-sm font-semibold text-primary">AI in Marketing &amp;
+                                                Advertising</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">March
+                                                5</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Drew 78
+                                                attendees, focusing on real-world applications across creative,
+                                                strategy, and campaign workflows.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Mar 3 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Matt Lentz</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">AI in Enterprise Consulting</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">March 12 (NYU Tandon)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Generated 217 RSVPs for this joint CUNY × NYU session, reflecting strong demand for applied AI in consulting and strategy.</p>
+                                            <p class="text-sm font-semibold text-primary">AI in Enterprise Consulting
+                                            </p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">March
+                                                12 (NYU Tandon)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Generated 217
+                                                RSVPs for this joint CUNY × NYU session, reflecting strong demand for
+                                                applied AI in consulting and strategy.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Mar 4 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Daniel Rock</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
-                                            <p class="text-sm font-semibold text-primary">Economics of AI and the Future of Work</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">Virtual (March)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Engaged 63 virtual and 35 in-person participants, connecting AI to productivity, labor markets, and long-term career pathways.</p>
+                                            <p class="text-sm font-semibold text-primary">Economics of AI and the Future
+                                                of Work</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">
+                                                Virtual (March)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Engaged 63
+                                                virtual and 35 in-person participants, connecting AI to productivity,
+                                                labor markets, and long-term career pathways.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -358,52 +431,69 @@
                     </div>
                     <!-- April -->
                     <div class="space-y-6">
-                        <div class="bg-secondary-container text-on-secondary-container py-3 px-6 rounded-lg font-bold text-lg inline-block">April Grand Finale</div>
+                        <div
+                            class="bg-secondary-container text-on-secondary-container py-3 px-6 rounded-lg font-bold text-lg inline-block">
+                            April Grand Finale</div>
                         <div class="space-y-4">
                             <!-- April 1 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Myles Younger</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
                                             <p class="text-sm font-semibold text-primary">Upcoming Session</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">April 16 (WH 222)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Details coming soon.</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">April
+                                                16 (WH 222)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Details coming
+                                                soon.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- April 2 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Chetan Karande</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
                                             <p class="text-sm font-semibold text-primary">Upcoming Session</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">April 21 (WH 222)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Details coming soon.</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">April
+                                                21 (WH 222)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Details coming
+                                                soon.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- April 3 -->
                             <div class="accordion bg-white rounded-xl shadow-sm border border-outline-variant/30 group">
-                                <button class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
+                                <button
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center transition-colors hover:bg-surface-container-lowest">
                                     <span class="font-bold text-on-surface text-left pr-4">Pete Kim</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
-                                <div class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
+                                <div
+                                    class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
                                             <p class="text-sm font-semibold text-primary">Upcoming Session</p>
-                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">April 30 (Hosted at NYU Tandon)</p>
-                                            <p class="text-sm text-on-surface-variant leading-relaxed">Details coming soon.</p>
+                                            <p class="text-xs font-bold tracking-widest uppercase text-secondary">April
+                                                30 (Hosted at NYU Tandon)</p>
+                                            <p class="text-sm text-on-surface-variant leading-relaxed">Details coming
+                                                soon.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -462,51 +552,68 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Leadership & AI Team Section -->
         <section class="py-32 bg-surface-container-lowest" id="leadership">
             <div class="max-w-5xl mx-auto px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Leadership &amp; AI Team</h2>
-                    <p class="mt-4 text-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">Meet the dedicated team making the CUNY AI Literacy initiative possible.</p>
+                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Leadership &amp; AI Team
+                    </h2>
+                    <p class="mt-4 text-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">Meet the dedicated team
+                        making the CUNY AI Literacy initiative possible.</p>
                 </div>
 
                 <!-- Professor Row -->
                 <div class="flex justify-center mb-8 md:mb-12">
-                    <div class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center max-w-md w-full hover:shadow-md transition-all md:hover:-translate-y-1">
-                        <img src="assets/team/cindy_pham.jpg" alt="Dr. Ngoc Cindy Pham" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-sm" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Ngoc+Cindy+Pham&background=00216f&color=fff&size=128';">
+                    <div
+                        class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center max-w-md w-full hover:shadow-md transition-all md:hover:-translate-y-1">
+                        <img src="assets/team/cindy_pham.jpg" alt="Dr. Ngoc Cindy Pham"
+                            class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-sm"
+                            onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Ngoc+Cindy+Pham&background=00216f&color=fff&size=128';">
                         <h3 class="text-2xl font-bold text-primary mb-1">Dr. Ngoc Cindy Pham</h3>
-                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-3">Associate Professor &amp; Initiative Lead</div>
-                        <div class="text-on-surface-variant text-sm font-medium">CUNY AI Center of Excellence- Brooklyn College</div>
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-3">Associate Professor
+                            &amp; Initiative Lead</div>
+                        <div class="text-on-surface-variant text-sm font-medium">CUNY AI Center of Excellence - Brooklyn
+                            College</div>
                     </div>
                 </div>
 
                 <!-- Tier 2: Student Leaders -->
                 <div class="mb-12">
-                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student Leaders</h3>
+                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student
+                        Leaders</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        <div class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center mb-5 text-on-surface-variant shadow-inner border-[3px] border-white">
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center mb-5 text-on-surface-variant shadow-inner border-[3px] border-white">
                                 <span class="material-symbols-outlined text-3xl">person</span>
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">Zaineb Cheema</h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">Core Role Placeholder</div>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">Core Role
+                                Placeholder</div>
                             <div class="text-on-surface-variant text-sm font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center mb-5 text-on-surface-variant shadow-inner border-[3px] border-white">
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center mb-5 text-on-surface-variant shadow-inner border-[3px] border-white">
                                 <span class="material-symbols-outlined text-3xl">person</span>
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">Hibah Zeinab</h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">Core Role Placeholder</div>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">Core Role
+                                Placeholder</div>
                             <div class="text-on-surface-variant text-sm font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center mb-5 text-on-surface-variant shadow-inner border-[3px] border-white">
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center mb-5 text-on-surface-variant shadow-inner border-[3px] border-white">
                                 <span class="material-symbols-outlined text-3xl">person</span>
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">William Sanchez</h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">Core Role Placeholder</div>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">Core Role
+                                Placeholder</div>
                             <div class="text-on-surface-variant text-sm font-medium">Brooklyn College</div>
                         </div>
                     </div>
@@ -514,70 +621,95 @@
 
                 <!-- Tier 3: Student Team -->
                 <div>
-                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student Team</h3>
+                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student
+                        Team</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center">
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Ali Imran Deniz</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Web Dev &amp; Event Coord.</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Web Dev
+                                &amp; Event Coord.</div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Jason Lin</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Madia Azimi</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Ruhshona Sayfiddinova</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Juan C. Solis Cazares</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Ines Bakır</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Damir Shavkatov</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
-                        <div class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-on-surface-variant shadow-inner border-[2px] border-white">
                                 <span class="material-symbols-outlined text-2xl">person</span>
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">Odil Nuriddinov</h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador</div>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">Ambassador
+                            </div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
                     </div>
@@ -596,7 +728,7 @@
                 </div>
                 <div class="space-y-2">
                     <p class="text-lg font-bold">Ngoc Cindy Pham, MBA, PhD</p>
-                    <p class="text-white/70">Associate Professor, CUNY AI Center of Excellence- Brooklyn College</p>
+                    <p class="text-white/70">Associate Professor, CUNY AI Center of Excellence - Brooklyn College</p>
                     <a class="text-secondary-container hover:underline font-medium"
                         href="mailto:NgocCindy.Pham@brooklyn.cuny.edu">NgocCindy.Pham@brooklyn.cuny.edu</a>
                 </div>
@@ -612,10 +744,10 @@
         </div>
     </footer>
     <script>
-        // Active nav link handling
+        // Header Scroll & Active link handling
         const navLinks = document.querySelectorAll('.nav-link');
-        const activeClasses = ['text-[#00216f]', 'font-bold', 'border-[#feb71a]'];
-        const inactiveClasses = ['text-[#444653]', 'border-transparent'];
+        const activeClasses = ['text-white', 'font-bold', 'border-[#feb71a]'];
+        const inactiveClasses = ['text-white/80', 'font-medium', 'border-transparent'];
 
         function setActive(link) {
             navLinks.forEach(l => {
@@ -634,8 +766,31 @@
         });
 
         // Also update active link on scroll
+        const mainNav = document.getElementById('mainNav');
+        const navContainer = document.getElementById('navContainer');
+        const logoFull = document.getElementById('logoFull');
+        const logoCompact = document.getElementById('logoCompact');
+
         const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
         window.addEventListener('scroll', () => {
+            // Header sticky transition
+            if (window.scrollY > 50) {
+                mainNav.classList.remove('bg-transparent', 'shadow-none');
+                mainNav.classList.add('bg-[#003366]', 'shadow-md');
+                navContainer.classList.remove('h-24');
+                navContainer.classList.add('h-16');
+                logoFull.classList.replace('opacity-100', 'opacity-0');
+                logoCompact.classList.replace('opacity-0', 'opacity-100');
+            } else {
+                mainNav.classList.add('bg-transparent', 'shadow-none');
+                mainNav.classList.remove('bg-[#003366]', 'shadow-md');
+                navContainer.classList.add('h-24');
+                navContainer.classList.remove('h-16');
+                logoFull.classList.replace('opacity-0', 'opacity-100');
+                logoCompact.classList.replace('opacity-100', 'opacity-0');
+            }
+
+            // Current section highlighting
             let current = '';
             sections.forEach(s => {
                 if (s.el.getBoundingClientRect().top <= 120) current = s.id;
