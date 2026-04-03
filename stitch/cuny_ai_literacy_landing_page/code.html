@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CUNY AI Literacy and Professional Readiness Series</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "inverse-primary": "#b6c4ff",
+                        "on-surface": "#151c22",
+                        "on-tertiary-fixed-variant": "#2d4384",
+                        "on-surface-variant": "#444653",
+                        "tertiary-fixed-dim": "#b5c4ff",
+                        "secondary-container": "#feb71a",
+                        "background": "#f6f9ff",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#747684",
+                        "surface-bright": "#f6f9ff",
+                        "surface-dim": "#d4dbe3",
+                        "surface-container-highest": "#dce3eb",
+                        "surface-variant": "#dce3eb",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ebf1fa",
+                        "on-primary-fixed": "#001550",
+                        "surface": "#f6f9ff",
+                        "on-tertiary-fixed": "#00164d",
+                        "surface-tint": "#3456c2",
+                        "outline-variant": "#c4c5d5",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#8fa6ff",
+                        "secondary-fixed-dim": "#ffba30",
+                        "on-secondary-fixed": "#271900",
+                        "tertiary": "#072465",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#93a8f0",
+                        "secondary-fixed": "#ffdeab",
+                        "on-primary-fixed-variant": "#133ca9",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#dbe1ff",
+                        "secondary": "#7d5700",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "tertiary-container": "#253b7c",
+                        "surface-container": "#e8eff7",
+                        "inverse-surface": "#2a3137",
+                        "on-background": "#151c22",
+                        "on-secondary-container": "#6c4a00",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#0033a1",
+                        "surface-container-high": "#e2e9f1",
+                        "surface-container-low": "#eef4fc",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dce1ff",
+                        "primary": "#00216f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tonal-architecture {
+            background-color: var(--surface);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 33, 111, 0.85), rgba(0, 33, 111, 0.95));
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-[#a8c7fa] selection:text-[#00216f]">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-[#00216f] dark:text-[#ffffff]">CUNY AI Literacy</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#00216f] dark:text-[#feb71a] font-bold border-b-2 border-[#feb71a] pb-1 font-['Inter'] font-medium tracking-tight"
+                    href="#">Overview</a>
+                <a class="text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-colors duration-300 font-['Inter'] font-medium tracking-tight"
+                    href="#sessions">Sessions</a>
+                <a class="text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-colors duration-300 font-['Inter'] font-medium tracking-tight"
+                    href="#speakers">Speakers</a>
+                <a class="text-[#444653] dark:text-slate-400 hover:text-[#0033a1] dark:hover:text-[#feb71a] transition-colors duration-300 font-['Inter'] font-medium tracking-tight"
+                    href="#leadership">Leadership</a>
+                <button
+                    class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-primary-container">Join
+                    Series</button>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[870px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="" class="w-full h-full object-cover"
+                    data-alt="Wide angle shot of a modern, sunlit university lecture hall with rows of wooden desks and sleek digital displays"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Yfs_xLSGI3F6rKCOEoA1ZHIpPFOIJOLDNsOODP_sp-QbPsqfUXT6hrRXlevWhovBt1haQk4ND0Ajoy_8lFPUrFoxSSGZ63yyJyE-G7pmXHZH-qbXU9U4FRtxbWu0Mx0HFDsql4Pmd9xyrSpaXdcSnL5_y3mtxAhUX61xLypHaZqSTAyqKy-eqF2IaZ1GBHX1WpanYaunf7zH8HjsWNH_xjD-kHOdg3ghFWnf5tDqzo1hvsUltD2tanw0EZwqW8tkEK5gSs7si8c" />
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-8 py-20 text-on-primary text-center md:text-left">
+                <div class="max-w-4xl">
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+                        CUNY AI Literacy and Professional Readiness Series
+                    </h1>
+                    <p class="text-xl md:text-2xl opacity-90 font-light mb-12 leading-relaxed">
+                        Applied, ethical AI for real-world learning and career readiness
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 transition-all"
+                            href="#sessions">
+                            Explore Sessions
+                        </a>
+                        <button
+                            class="border border-white/30 backdrop-blur-md px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Impact Section (Stats Bar) -->
+        <section class="relative z-20 -mt-16 max-w-6xl mx-auto px-8">
+            <div
+                class="bg-surface-container-lowest shadow-2xl shadow-primary/10 rounded-xl grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-outline-variant/20 overflow-hidden">
+                <div class="p-8 text-center group transition-colors hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-2">groups</span>
+                    <div class="text-4xl font-black text-primary mb-2">800+</div>
+                    <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Students
+                        reached across CUNY and NYU</div>
+                </div>
+                <div class="p-8 text-center group transition-colors hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-2">sentiment_satisfied</span>
+                    <div class="text-4xl font-black text-primary mb-2">94%</div>
+                    <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Student
+                        satisfaction</div>
+                </div>
+                <div class="p-8 text-center group transition-colors hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-2">event_available</span>
+                    <div class="text-4xl font-black text-primary mb-2">217</div>
+                    <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">RSVPs for
+                        flagship CUNY × NYU session</div>
+                </div>
+                <div class="p-8 text-center group transition-colors hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-2">hub</span>
+                    <div class="text-4xl font-black text-primary mb-2 text-2xl md:text-3xl lg:text-4xl">Cross-campus
+                    </div>
+                    <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Participation
+                        and collaboration</div>
+                </div>
+            </div>
+        </section>
+        <!-- Overview Section -->
+        <section class="py-32 px-8 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl font-bold text-primary mb-8 tracking-tight">Bridging Learning with Industry</h2>
+                    <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                        <p>The CUNY AI Literacy and Professional Readiness Series is a Spring 2026 initiative focused on
+                            helping students develop practical and responsible AI skills.</p>
+                        <p>The program brings together students from across CUNY and NYU through hands-on,
+                            industry-informed sessions that connect classroom learning with real-world applications in
+                            research, business, and career development.</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -right-4 w-full h-full bg-surface-container rounded-xl"></div>
+                        <img alt="" class="relative z-10 w-full rounded-xl shadow-lg object-cover aspect-video"
+                            data-alt="Diverse group of university students collaborating around a sleek white table with laptops and digital tablets in a bright modern library"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA3OMV23bnbp7SnQSlFnwUIbrNp29-8Jcl89OaVIfmbjiRdXJvJeI8hMcFZX3GuARWMW1n_cc2uhF6GXOBHIrblLLHKlieTpVtNHdCMMzoRPK0lvPvL7EplhUjaSYfNt1qb3-uEzQXdEXeYDRgCCzo0WOxLX4CkldM7a59KsFU59ECBoxLrVeJzNCBcZxDXAJQOwMFgFPQ0FeQWP8WnhslGLyAEF-aAt7HsEDM8v3B-kjjb1YQQQA4JnYfPwdVMgrH1XdgdoLb68g" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sessions & Speakers Grid -->
+        <section class="py-32 bg-surface-container" id="sessions">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Spring 2026
+                            Curriculum</span>
+                        <h2 class="text-5xl font-black text-primary tracking-tighter">Featured Sessions</h2>
+                    </div>
+                </div>
+                <!-- Sessions List -->
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-24">
+                    <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-t-4 border-primary">
+                        <h3 class="font-bold text-primary mb-2">AI in Business and Marketing (IBM)</h3>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-t-4 border-primary">
+                        <h3 class="font-bold text-primary mb-2">Prompt Engineering and AI for Research and Writing</h3>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-t-4 border-primary">
+                        <h3 class="font-bold text-primary mb-2">AI in Advertising, PR, and Creative Workflows</h3>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-t-4 border-secondary-container">
+                        <h3 class="font-bold text-primary mb-2">Enterprise AI Consulting (CUNY × NYU collaboration)</h3>
+                    </div>
+                    <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-t-4 border-primary">
+                        <h3 class="font-bold text-primary mb-2">The Economics of AI and the Future of Work</h3>
+                    </div>
+                </div>
+                <!-- Monthly Highlights Grid -->
+                <h3 class="text-3xl font-bold text-primary mb-12 text-center" id="speakers">Speaker Highlights</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- February -->
+                    <div class="space-y-6">
+                        <div class="bg-primary text-white py-3 px-6 rounded-lg font-bold text-lg inline-block">February
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Poe Myint Swe</p>
+                                <p class="text-sm text-on-surface-variant">AI-Powered Branding</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Hannah Frey from IBM</p>
+                                <p class="text-sm text-on-surface-variant">AI in Business</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Conor &amp; Finn Grennan</p>
+                                <p class="text-sm text-on-surface-variant">AI &amp; Future of Work</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- March -->
+                    <div class="space-y-6">
+                        <div class="bg-primary text-white py-3 px-6 rounded-lg font-bold text-lg inline-block">March
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Claudio Schapsis</p>
+                                <p class="text-sm text-on-surface-variant">Prompt Engineering</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Paul Santello</p>
+                                <p class="text-sm text-on-surface-variant">AI in Marketing</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Matt Lentz from Monks</p>
+                                <p class="text-sm text-on-surface-variant">Enterprise Consulting</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Daniel Rock from Wharton</p>
+                                <p class="text-sm text-on-surface-variant">Economics of AI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- April -->
+                    <div class="space-y-6">
+                        <div
+                            class="bg-secondary-container text-on-secondary-container py-3 px-6 rounded-lg font-bold text-lg inline-block">
+                            April Grand Finale</div>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Pete Kim</p>
+                                <p class="text-sm text-on-surface-variant">Dolabra Digital</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Myles Younger</p>
+                                <p class="text-sm text-on-surface-variant">U of Digital</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-outline-variant/30">
+                                <p class="font-bold text-on-surface">Chetan Karande</p>
+                                <p class="text-sm text-on-surface-variant">DTCC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Student Leadership & Showcase -->
+        <section class="py-32 px-8 max-w-7xl mx-auto" id="leadership">
+            <div class="bg-primary-container rounded-3xl p-12 md:p-20 text-on-primary overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+                    <svg class="w-full h-full scale-150" fill="none" viewbox="0 0 400 400"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="20"></circle>
+                        <circle cx="200" cy="200" r="120" stroke="currentColor" stroke-width="10"></circle>
+                    </svg>
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-black mb-6">Student Innovation Hub</h2>
+                    <p class="text-xl md:text-2xl font-light opacity-80 max-w-3xl mb-16 leading-relaxed">
+                        This initiative is supported by student leaders from Brooklyn College, across CUNY campuses, and
+                        NYU. Students contribute to outreach, coordination, and peer learning, helping build a
+                        collaborative and career-focused learning community.
+                    </p>
+                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-1 border border-white/10 max-w-4xl">
+                        <div class="grid md:grid-cols-2 gap-12 items-center p-8">
+                            <div class="order-2 md:order-1">
+                                <div
+                                    class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                                    <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                                    Student Showcase
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4">Coming Soon</h3>
+                                <p class="text-on-primary/70 leading-relaxed mb-8">
+                                    Selected student projects will be featured here as part of an end-of-semester
+                                    showcase highlighting applied AI work across CUNY and NYU.
+                                </p>
+                                <button
+                                    class="bg-white/20 text-white/50 px-8 py-3 rounded-xl font-bold cursor-not-allowed"
+                                    disabled="">
+                                    Showcase Coming Soon
+                                </button>
+                            </div>
+                            <div class="order-1 md:order-2 flex justify-center">
+                                <div
+                                    class="w-full aspect-square bg-white/10 rounded-xl flex flex-col items-center justify-center p-12 text-center border-2 border-dashed border-white/20">
+                                    <span class="material-symbols-outlined text-6xl mb-4 opacity-50">auto_awesome</span>
+                                    <p class="text-lg font-bold opacity-50 uppercase tracking-tighter">Showcasing
+                                        Student Innovation and AI Literacy Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-inverse-surface text-white">
+        <div class="max-w-7xl mx-auto px-8 py-16">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+                <div>
+                    <div class="text-2xl font-black mb-2 uppercase tracking-tighter">CUNY AI Literacy</div>
+                    <p class="text-white/60 text-sm mb-6 max-w-md">Empowering the world's largest urban university
+                        system with the essential skills for the artificial intelligence era.</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-lg font-bold">Ngoc Cindy Pham, MBA, PhD</p>
+                    <p class="text-white/70">Associate Professor, Brooklyn College, CUNY</p>
+                    <a class="text-secondary-container hover:underline font-medium"
+                        href="mailto:NgocCindy.Pham@brooklyn.cuny.edu">NgocCindy.Pham@brooklyn.cuny.edu</a>
+                </div>
+            </div>
+            <div
+                class="pt-12 mt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+                <p class="text-sm">© 2026 CUNY AI Literacy and Professional Readiness Series. All rights reserved.</p>
+                <div class="flex gap-8 text-sm">
+                    <a class="hover:text-white transition-all" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-all" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
