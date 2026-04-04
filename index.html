@@ -125,11 +125,23 @@
                     class="bg-[#feb71a] text-[#0033A1] px-6 py-2.5 rounded-xl font-bold scale-95 active:opacity-80 transition-transform hover:bg-[#ffc94d]">Join
                     Series</button>
             </div>
-            <button class="md:hidden text-white hover:text-gray-200">
-                <span class="material-symbols-outlined">menu</span>
+            <button id="mobileMenuBtn" class="md:hidden text-white hover:text-gray-200 z-[60] relative">
+                <span id="mobileMenuIcon" class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </nav>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-40 hidden transition-opacity duration-300 opacity-0 md:hidden"></div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="fixed right-0 top-0 h-full w-64 bg-[#0033A1] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-28 px-8 gap-6 shadow-2xl border-l border-white/10">
+        <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight" href="#">Overview</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#sessions">Sessions</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#speakers">Speakers</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#leadership">Leadership</a>
+        <button class="bg-[#feb71a] text-[#0033A1] px-6 py-3 rounded-xl font-bold mt-4 w-full text-center active:opacity-80 transition-transform">Join Series</button>
+    </div>
     <main>
         <!-- Hero Section -->
         <section class="relative min-h-[870px] flex items-center overflow-hidden">
@@ -1225,6 +1237,40 @@
             btn.addEventListener('click', () => {
                 const parent = btn.parentElement;
                 parent.classList.toggle('is-open');
+            });
+        });
+
+        // Mobile Menu Drawer handling
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            if (isMobileMenuOpen) {
+                mobileOverlay.classList.remove('hidden');
+                setTimeout(() => mobileOverlay.classList.remove('opacity-0'), 10);
+                mobileDrawer.classList.remove('translate-x-full');
+                mobileMenuIcon.textContent = 'close';
+                document.body.style.overflow = 'hidden'; 
+            } else {
+                mobileOverlay.classList.add('opacity-0');
+                mobileDrawer.classList.add('translate-x-full');
+                mobileMenuIcon.textContent = 'menu';
+                document.body.style.overflow = ''; 
+                setTimeout(() => mobileOverlay.classList.add('hidden'), 300); 
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(isMobileMenuOpen) toggleMobileMenu();
             });
         });
     </script>
