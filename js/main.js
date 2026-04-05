@@ -4,18 +4,36 @@ const activeClasses = ['text-white', 'font-bold', 'border-[#feb71a]'];
 const inactiveClasses = ['text-white/80', 'font-medium', 'border-transparent'];
 
 function setActive(link) {
-    navLinks.forEach(l => {
-        l.classList.remove('active', ...activeClasses);
-        inactiveClasses.forEach(c => l.classList.add(c));
+    const targetHref = link.getAttribute('href');
+    const allLinks = [...navLinks, ...mobileNavLinks];
+
+    allLinks.forEach(l => {
+        const isMobileLink = l.classList.contains('mobile-nav-link');
+        l.classList.remove('active');
+        if (isMobileLink) {
+            l.classList.remove('text-white', 'font-bold');
+            l.classList.add('text-white/60', 'font-medium');
+        } else {
+            l.classList.remove(...activeClasses);
+            inactiveClasses.forEach(c => l.classList.add(c));
+        }
+
+        if (l.getAttribute('href') === targetHref || (targetHref === '#' && l.getAttribute('href') === '#')) {
+            l.classList.add('active');
+            if (isMobileLink) {
+                l.classList.add('text-white', 'font-bold');
+                l.classList.remove('text-white/60', 'font-medium');
+            } else {
+                l.classList.add(...activeClasses);
+                l.classList.remove(...inactiveClasses);
+            }
+        }
     });
-    link.classList.add('active', ...activeClasses);
-    link.classList.remove(...inactiveClasses);
 }
 
 // Set initial active state
-if (document.querySelector('.nav-link.active')) {
-    setActive(document.querySelector('.nav-link.active'));
-}
+const initialActive = document.querySelector('.nav-link.active') || navLinks[0];
+if (initialActive) setActive(initialActive);
 
 const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership', 'faq'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
 
@@ -26,11 +44,14 @@ const logoCompact = document.getElementById('logoCompact');
 
 let isScrollingFromClick = false;
 
-navLinks.forEach(link => {
+// Combined link listener
+[...navLinks, ...mobileNavLinks].forEach(link => {
     link.addEventListener('click', (e) => {
         isScrollingFromClick = true;
         setActive(link);
-        // Allow scroll listener to take over after scroll completes
+        if (link.classList.contains('mobile-nav-link')) {
+            setTimeout(() => { if (isMobileMenuOpen) toggleMobileMenu(); }, 150);
+        }
         setTimeout(() => { isScrollingFromClick = false; }, 1000);
     });
 });
@@ -63,14 +84,12 @@ window.addEventListener('scroll', () => {
         current = 'faq';
     } else {
         sections.forEach(s => {
-            if (s.el.getBoundingClientRect().top <= 120) current = s.id;
+            if (s.el.getBoundingClientRect().top <= 150) current = s.id;
         });
     }
 
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href').replace('#', '');
-        if (href === current) setActive(link);
-    });
+    const targetLink = [...navLinks].find(l => l.getAttribute('href').replace('#', '') === current) || navLinks[0];
+    if (targetLink) setActive(targetLink);
 });
 
 // Accordion handling
@@ -108,12 +127,6 @@ function toggleMobileMenu() {
 
 if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMobileMenu);
-
-mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if(isMobileMenuOpen) toggleMobileMenu();
-    });
-});
 
 // Lightbox functionality
 const lightboxOverlay = document.getElementById('lightboxOverlay');
