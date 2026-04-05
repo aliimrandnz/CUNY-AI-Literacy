@@ -17,3 +17,15 @@ body {
 .hero-overlay {
     background: linear-gradient(rgba(0, 33, 111, 0.85), rgba(0, 33, 111, 0.95));
 }
+
+.text-cuny-blue { color: #003366; }
+.bg-cuny-blue { background-color: #003366; }
+
+@keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-hero-fade {
+    animation: heroFadeIn 1.5s ease-out forwards;
+}
