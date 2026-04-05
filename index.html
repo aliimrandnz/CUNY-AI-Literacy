@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -6,24 +6,28 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>CUNY AI Literacy and Professional Readiness Series</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications designed for the world's largest urban university system." />
-    <meta name="keywords" content="CUNY AI, AI Literacy, Career Readiness, Artificial Intelligence, NYU, IBM, Monks, Brooklyn College, Faculty Development, Student Innovation" />
+    <meta name="description"
+        content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications designed for the world's largest urban university system." />
+    <meta name="keywords"
+        content="CUNY AI, AI Literacy, Career Readiness, Artificial Intelligence, NYU, IBM, Monks, Brooklyn College, Faculty Development, Student Innovation" />
     <meta name="author" content="CUNY AI Center of Excellence" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cuny-ai-series.vercel.app/" />
     <meta property="og:title" content="CUNY AI Literacy and Professional Readiness Series" />
-    <meta property="og:description" content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications." />
+    <meta property="og:description"
+        content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications." />
     <meta property="og:image" content="https://cuny-ai-series.vercel.app/assets/cuny_logo_full_white.png" />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://cuny-ai-series.vercel.app/" />
     <meta name="twitter:title" content="CUNY AI Literacy and Professional Readiness Series" />
-    <meta name="twitter:description" content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications." />
+    <meta name="twitter:description"
+        content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications." />
     <meta name="twitter:image" content="https://cuny-ai-series.vercel.app/assets/cuny_logo_full_white.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
@@ -42,7 +46,8 @@
             <a href="#" class="relative flex items-center h-full w-[260px] md:w-[320px]">
                 <img id="logoFull" src="assets/cuny_logo_full_white.png" alt="CUNY Logo" loading="lazy" decoding="async"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-100" />
-                <img id="logoCompact" src="assets/CUNY_Logo_White_RGB.png" alt="CUNY Block Logo" loading="lazy" decoding="async"
+                <img id="logoCompact" src="assets/CUNY_Logo_White_RGB.png" alt="CUNY Block Logo" loading="lazy"
+                    decoding="async"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-0 pointer-events-none" />
             </a>
             <div class="hidden md:flex items-center gap-6">
@@ -61,32 +66,42 @@
                     class="bg-[#feb71a] text-[#0033A1] px-5 py-2 m-0 rounded-lg text-sm font-bold active:opacity-80 transition-transform hover:bg-[#ffc94d] no-underline inline-block">Register
                     Now</a>
             </div>
-            <button id="mobileMenuBtn" class="md:hidden text-white hover:text-gray-200 z-[60] relative" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <button id="mobileMenuBtn" class="md:hidden text-white hover:text-gray-200 z-[60] relative"
+                aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileDrawer">
                 <span id="mobileMenuIcon" class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Drawer Overlay -->
-    <div id="mobileOverlay" class="fixed inset-0 bg-black/50 z-40 hidden transition-opacity duration-300 opacity-0 md:hidden"></div>
+    <div id="mobileOverlay"
+        class="fixed inset-0 bg-black/50 z-40 hidden transition-opacity duration-300 opacity-0 md:hidden"></div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="fixed right-0 top-0 h-full w-64 bg-[#0033A1] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-32 px-8 gap-8 shadow-2xl border-l border-white/10">
+    <div id="mobileDrawer"
+        class="fixed right-0 top-0 h-full w-64 bg-[#0033A1] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-32 px-8 gap-8 shadow-2xl border-l border-white/10">
         <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight" href="#">Overview</a>
-        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#sessions">Sessions</a>
-        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#speakers">Speakers</a>
-        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#leadership">Leadership</a>
-        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors" href="#faq">FAQ</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
+            href="#sessions">Sessions</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
+            href="#speakers">Speakers</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
+            href="#leadership">Leadership</a>
+        <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
+            href="#faq">FAQ</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScTPbL5oRDqb0sUrt5zCN6DpvZo8esnqz1Yxgck9tlN9ymlhw/viewform"
             target="_blank" rel="noopener noreferrer"
             style="background-color: #FFB81C !important; color: #003366 !important; font-weight: bold !important;"
-            class="bg-[#FFB81C] text-[#003366] font-bold py-4 px-8 rounded-xl block text-center mt-10 shadow-lg transition-transform active:scale-95 no-underline">Register Now</a>
+            class="bg-[#FFB81C] text-[#003366] font-bold py-4 px-8 rounded-xl block text-center mt-10 shadow-lg transition-transform active:scale-95 no-underline">Register
+            Now</a>
     </div>
     <main>
         <!-- Hero Section -->
         <section class="relative min-h-[870px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0 scale-110">
-                <img src="assets/hero-bg-new.jpg" alt="University lecture hall with students and speakers" class="w-full h-full object-cover" style="object-position: 50% 35%;" loading="eager" decoding="async">
+                <img src="assets/hero-bg-new.jpg" alt="University lecture hall with students and speakers"
+                    class="w-full h-full object-cover" style="object-position: 50% 35%;" loading="eager"
+                    decoding="async">
                 <div class="absolute inset-0 hero-overlay"></div>
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-20 text-on-primary text-center md:text-left">
@@ -162,10 +177,21 @@
                 <div class="order-2 md:order-1">
                     <h2 class="text-4xl font-bold text-primary mb-8 tracking-tight">About the Initiative</h2>
                     <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
-                        <p>The CUNY AI Literacy and Professional Readiness Series is a Spring 2026 initiative led by Dr. Ngoc Cindy Pham, Associate Professor in the Murray Koppelman School of Business at Brooklyn College.</p>
-                        <p>Supported by a grant from the CUNY AI Innovation Fund through the Office of Academic Innovation (CUNY Office of Academic Affairs), the series equips CUNY students with practical, ethical, and career-ready AI skills. The program brings together students from Brooklyn College, other CUNY campuses, and NYU Tandon School of Engineering through hands-on, industry-informed sessions that connect classroom learning with real-world applications in business, research, and career development.</p>
-                        <p>Participants earn a digital badge as part of a micro-credential pathway designed to demonstrate AI readiness to future employers. The series emphasizes critical thinking before tool adoption, ethical decision-making, applied enterprise use cases, and targeted support for first-generation and immigrant students.</p>
-                        <p>The initiative is part of CUNYΓÇÖs broader efforts in AI leadership development and workforce-focused AI literacy programming.</p>
+                        <p>The CUNY AI Literacy and Professional Readiness Series is a Spring 2026 initiative led by Dr.
+                            Ngoc Cindy Pham, Associate Professor in the Murray Koppelman School of Business at Brooklyn
+                            College.</p>
+                        <p>Supported by a grant from the CUNY AI Innovation Fund through the Office of Academic
+                            Innovation (CUNY Office of Academic Affairs), the series equips CUNY students with
+                            practical, ethical, and career-ready AI skills. The program brings together students from
+                            Brooklyn College, other CUNY campuses, and NYU Tandon School of Engineering through
+                            hands-on, industry-informed sessions that connect classroom learning with real-world
+                            applications in business, research, and career development.</p>
+                        <p>Participants earn a digital badge as part of a micro-credential pathway designed to
+                            demonstrate AI readiness to future employers. The series emphasizes critical thinking before
+                            tool adoption, ethical decision-making, applied enterprise use cases, and targeted support
+                            for first-generation and immigrant students.</p>
+                        <p>The initiative is part of CUNY's broader efforts in AI leadership development and
+                            workforce-focused AI literacy programming.</p>
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
@@ -192,7 +218,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-24">
                     <!-- Card 1 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img src="assets/featured_sessions/2.jpg" alt="Conor Grennan presenting" loading="lazy" decoding="async"
+                        <img src="assets/featured_sessions/2.jpg" alt="Conor Grennan presenting" loading="lazy"
+                            decoding="async"
                             class="absolute inset-0 w-full h-full object-cover object-[center_10%] transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
                         </div>
@@ -205,7 +232,8 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img src="assets/featured_sessions/IBM/063A0548.jpg" alt="AI in Business & Marketing Event Hall" loading="lazy" decoding="async"
+                        <img src="assets/featured_sessions/IBM/063A0548.jpg" alt="AI in Business & Marketing Event Hall"
+                            loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
                         </div>
@@ -217,7 +245,8 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img src="assets/featured_sessions/Matt_Lentz/2.jpg" alt="Matt Lentz (.Monks) session in action" loading="lazy" decoding="async"
+                        <img src="assets/featured_sessions/Matt_Lentz/2.jpg" alt="Matt Lentz (.Monks) session in action"
+                            loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
                         </div>
@@ -255,7 +284,7 @@
                         Across February and March, the series reached <span class="font-bold text-[#feb71a]">800+
                             attendees</span> (including students, faculty and staff) with a <span
                             class="font-bold text-[#feb71a]">94%
-                            satisfaction rate</span> ΓÇö with April still ahead.
+                            satisfaction rate</span> — with April still ahead.
                     </p>
                 </div>
 
@@ -271,7 +300,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-poe">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-poe">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Poe
                                         Myint Swe</span>
                                     <span
@@ -298,7 +328,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-conor">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-conor">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Conor
                                         & Finn Grennan</span>
                                     <span
@@ -322,32 +353,40 @@
                                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 max-w-sm">
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/1.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/1.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/1.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/1.jpg" loading="lazy"
+                                                            decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 1">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/2.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/2.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/2.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/2.jpg" loading="lazy"
+                                                            decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 2">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/3.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/3.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/3.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/3.jpg" loading="lazy"
+                                                            decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 3">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/4.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/4.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/4.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/4.jpg" loading="lazy"
+                                                            decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 4">
                                                     </a>
@@ -361,7 +400,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-hannah">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-hannah">
                                     <span
                                         class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Hannah
                                         Frey</span>
@@ -384,48 +424,60 @@
                                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 max-w-sm">
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/IBM/063A0473.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/IBM/063A0473.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/IBM/063A0473.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/IBM/063A0473.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 1">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/IBM/063A0433.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/IBM/063A0433.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/IBM/063A0433.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/IBM/063A0433.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 2">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/IBM/063A0444.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/IBM/063A0444.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/IBM/063A0444.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/IBM/063A0444.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 3">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/IBM/063A0462.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/IBM/063A0462.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/IBM/063A0462.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/IBM/063A0462.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 4">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/IBM/063A0482.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/IBM/063A0482.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/IBM/063A0482.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/IBM/063A0482.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 5">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/IBM/063A0548.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/IBM/063A0548.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/IBM/063A0548.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/IBM/063A0548.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 6">
                                                     </a>
@@ -449,7 +501,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-claudio">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-claudio">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Dr.
                                         Claudio Schapsis</span>
                                     <span
@@ -476,7 +529,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-paul-santello">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-paul-santello">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Paul
                                         Santello</span>
                                     <span
@@ -499,32 +553,40 @@
                                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 max-w-sm">
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 1">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 2">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 3">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 4">
                                                     </a>
@@ -538,7 +600,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-matt-lentz">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-matt-lentz">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Matt
                                         Lentz</span>
                                     <span
@@ -561,32 +624,40 @@
                                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 max-w-sm">
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Matt_Lentz/1.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Matt_Lentz/1.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Matt_Lentz/1.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Matt_Lentz/1.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 1">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Matt_Lentz/2.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Matt_Lentz/2.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Matt_Lentz/2.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Matt_Lentz/2.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 2">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Matt_Lentz/3.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Matt_Lentz/3.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Matt_Lentz/3.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Matt_Lentz/3.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 3">
                                                     </a>
                                                 </div>
                                                 <div
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
-                                                    <a href="assets/featured_sessions/Matt_Lentz/4.jpg" class="gallery-item block w-full h-full">
-                                                        <img src="assets/featured_sessions/Matt_Lentz/4.jpg" loading="lazy" decoding="async"
+                                                    <a href="assets/featured_sessions/Matt_Lentz/4.jpg"
+                                                        class="gallery-item block w-full h-full">
+                                                        <img src="assets/featured_sessions/Matt_Lentz/4.jpg"
+                                                            loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 4">
                                                     </a>
@@ -600,7 +671,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-daniel-rock">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-daniel-rock">
                                     <span
                                         class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Daniel
                                         Rock</span>
@@ -637,7 +709,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300 relative overflow-hidden">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-myles-younger">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-myles-younger">
                                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 items-start">
                                         <span
                                             class="bg-[#1D3A83]/10 text-[#0033A1] text-[10px] font-black uppercase px-2.5 py-1 rounded-md tracking-widest leading-none border border-[#0033A1]/10 self-start sm:self-auto mt-1 sm:mt-0">Upcoming</span>
@@ -666,7 +739,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300 relative overflow-hidden">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-chetan-karande">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-chetan-karande">
                                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 items-start">
                                         <span
                                             class="bg-[#1D3A83]/10 text-[#0033A1] text-[10px] font-black uppercase px-2.5 py-1 rounded-md tracking-widest leading-none border border-[#0033A1]/10 self-start sm:self-auto mt-1 sm:mt-0">Upcoming</span>
@@ -695,7 +769,8 @@
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300 relative overflow-hidden">
                                 <button
-                                    class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl" aria-expanded="false" aria-controls="faq-pete-kim">
+                                    class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
+                                    aria-expanded="false" aria-controls="faq-pete-kim">
                                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 items-start">
                                         <span
                                             class="bg-[#1D3A83]/10 text-[#0033A1] text-[10px] font-black uppercase px-2.5 py-1 rounded-md tracking-widest leading-none border border-[#0033A1]/10 self-start sm:self-auto mt-1 sm:mt-0">Upcoming</span>
@@ -723,9 +798,9 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <!-- Student Leadership & Showcase -->
@@ -811,11 +886,10 @@
                         </div>
                         <h3 class="text-2xl font-bold text-primary mb-1">
                             <a href="https://www.linkedin.com/in/dr-ngoc-cindy-pham-78b53519b/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="hover:text-[#F2A900] transition-colors duration-300">
+                                rel="noopener noreferrer" class="hover:text-[#F2A900] transition-colors duration-300">
                                 Dr. Ngoc Cindy Pham
-                                <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1"
-                                    fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
+                                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
@@ -842,7 +916,8 @@
                             class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Zaineb.jpeg" alt="Zaineb Cheema" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Zaineb.jpeg" alt="Zaineb Cheema" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Zaineb+Cheema&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">
@@ -865,7 +940,8 @@
                             class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Hibah.jpg" alt="Hibah Zeinab" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Hibah.jpg" alt="Hibah Zeinab" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Hibah+Zeinab&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">
@@ -888,7 +964,8 @@
                             class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/William.jpg" alt="William Sanchez" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/William.jpg" alt="William Sanchez" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=William+Sanchez&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">
@@ -942,7 +1019,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Jason.jpeg" alt="Jason Lin" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Jason.jpeg" alt="Jason Lin" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Jason+Lin&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -965,7 +1043,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Madia.jpeg" alt="Madia Azimi" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Madia.jpeg" alt="Madia Azimi" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Madia+Azimi&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -988,8 +1067,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Ruhshona.jpeg" alt="Ruhshona Sayfiddinova" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover"
+                                <img src="assets/Ruhshona.jpeg" alt="Ruhshona Sayfiddinova" loading="lazy"
+                                    decoding="async" class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Ruhshona+Sayfiddinova&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -1012,7 +1091,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Juan.jpeg" alt="Juan Solis Cazares" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Juan.jpeg" alt="Juan Solis Cazares" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Juan+Solis+Cazares&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -1035,7 +1115,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Ines.jpg" alt="Ines Bakir" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Ines.jpg" alt="Ines Bakir" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Ines+Bakir&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -1050,7 +1131,8 @@
                                     </svg>
                                 </a>
                             </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">MARKETING &amp;
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">MARKETING
+                                &amp;
                                 OUTREACH COORDINATOR</div>
                             <div class="text-on-surface-variant text-xs font-medium">Brooklyn College</div>
                         </div>
@@ -1058,7 +1140,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Damir.jpg" alt="Damir Shavkatov" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Damir.jpg" alt="Damir Shavkatov" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Damir+Shavkatov&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -1081,7 +1164,8 @@
                             class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
                             <div
                                 class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img src="assets/Odil.jpeg" alt="Odil Nuriddinov" loading="lazy" decoding="async" class="w-full h-full object-cover"
+                                <img src="assets/Odil.jpeg" alt="Odil Nuriddinov" loading="lazy" decoding="async"
+                                    class="w-full h-full object-cover"
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Odil+Nuriddinov&background=e8eff7&color=444653&size=120';">
                             </div>
                             <h4 class="text-base font-bold text-primary mb-1">
@@ -1113,49 +1197,67 @@
                     <div class="h-1 w-20 bg-secondary-container mx-auto rounded-full"></div>
                 </div>
                 <div class="space-y-4">
-                    <details class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
+                    <details
+                        class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-                            <span class="text-lg font-bold text-primary">Who can attend the CUNY AI Literacy Series?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                            <span class="text-lg font-bold text-primary">Who can attend the CUNY AI Literacy
+                                Series?</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-                            The series is primarily designed for CUNY students, faculty, and staff. Students from Brooklyn College, other CUNY campuses, and NYU Tandon School of Engineering are encouraged to participate.
+                            The series is primarily designed for CUNY students, faculty, and staff. Students from
+                            Brooklyn College, other CUNY campuses, and NYU Tandon School of Engineering are encouraged
+                            to participate.
                         </div>
                     </details>
-                    <details class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
+                    <details
+                        class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Are there any prerequisites required?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-                            No prior technical experience or AI knowledge is required. The series is built to take participants from absolute basics to practical, ethical, and career-ready AI application.
+                            No prior technical experience or AI knowledge is required. The series is built to take
+                            participants from absolute basics to practical, ethical, and career-ready AI application.
                         </div>
                     </details>
-                    <details class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
+                    <details
+                        class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">What is the format of the sessions?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-                            Sessions are industry-led, hands-on, and highly interactive. They combine theory with real-world application, featuring guest speakers from companies like IBM and NYU Tandon Engineering.
+                            Sessions are industry-led, hands-on, and highly interactive. They combine theory with
+                            real-world application, featuring guest speakers from companies like IBM and NYU Tandon
+                            Engineering.
                         </div>
                     </details>
-                    <details class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
+                    <details
+                        class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Will I receive a badge or certificate?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-                            Yes! Participants can earn a digital badge as part of a micro-credential pathway. This badge demonstrates your AI readiness and ethical technical proficiency to future employers.
+                            Yes! Participants can earn a digital badge as part of a micro-credential pathway. This badge
+                            demonstrates your AI readiness and ethical technical proficiency to future employers.
                         </div>
                     </details>
-                    <details class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
+                    <details
+                        class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">How do I register?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-                            You can register by clicking the "Register Now" button in the navigation bar or by scrolling to the session details and using the provided RSVP forms for specific event dates.
+                            You can register by clicking the "Register Now" button in the navigation bar or by scrolling
+                            to the session details and using the provided RSVP forms for specific event dates.
                         </div>
                     </details>
                 </div>
@@ -1170,19 +1272,22 @@
                     <div class="text-2xl font-black mb-2 uppercase tracking-tighter">CUNY AI Literacy</div>
                     <p class="text-white/60 text-sm mb-6 max-w-md">Empowering the world's largest urban university
                         system with the essential skills for the artificial intelligence era.</p>
-                    <a class="text-secondary-container hover:underline font-medium text-sm"
-                        href="#" onclick="window.location.href='mailto:' + 'NgocCindy.Pham' + '@' + 'brooklyn.cuny.edu'; return false;">Contact Us</a>
+                    <a class="text-secondary-container hover:underline font-medium text-sm" href="#"
+                        onclick="window.location.href='mailto:' + 'NgocCindy.Pham' + '@' + 'brooklyn.cuny.edu'; return false;">Contact
+                        Us</a>
                 </div>
             </div>
             <div
                 class="pt-12 mt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 opacity-70">
-                <p class="text-sm">┬⌐ 2026 CUNY AI Literacy and Professional Readiness Series. All rights reserved.</p>
+                <p class="text-sm">© 2026 CUNY AI Literacy and Professional Readiness Series. All rights reserved.</p>
                 <div class="flex items-center gap-6 shrink-0">
                     <div class="h-10 md:h-12 w-auto max-w-[150px] flex items-center justify-center shrink-0">
-                        <img src="assets/brooklyn-college-logo.png" alt="Brooklyn College Logo" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <img src="assets/brooklyn-college-logo.png" alt="Brooklyn College Logo"
+                            class="max-h-full max-w-full object-contain" loading="lazy">
                     </div>
                     <div class="h-7 md:h-9 w-auto max-w-[130px] flex items-center justify-center shrink-0">
-                        <img src="assets/NYUTandon_ShortLogo_Color.png" alt="NYU Tandon Logo" class="max-h-full max-w-full object-contain" loading="lazy">
+                        <img src="assets/NYUTandon_ShortLogo_Color.png" alt="NYU Tandon Logo"
+                            class="max-h-full max-w-full object-contain" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1190,20 +1295,28 @@
     </footer>
 
     <!-- Lightbox Modal -->
-    <div id="lightboxOverlay" class="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300" role="dialog" aria-modal="true">
-        <button id="lightboxClose" class="absolute top-6 right-6 text-white hover:text-[#F2A900] transition-colors z-[101]" aria-label="Close">
+    <div id="lightboxOverlay"
+        class="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
+        role="dialog" aria-modal="true">
+        <button id="lightboxClose"
+            class="absolute top-6 right-6 text-white hover:text-[#F2A900] transition-colors z-[101]" aria-label="Close">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
-        
+
         <!-- Navigation Arrows -->
-        <button id="prevBtn" class="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group">
-            <span class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform">&lt;</span>
+        <button id="prevBtn"
+            class="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group">
+            <span
+                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform">&lt;</span>
         </button>
-        <button id="nextBtn" class="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group">
-            <span class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform">&gt;</span>
+        <button id="nextBtn"
+            class="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group">
+            <span
+                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform">&gt;</span>
         </button>
 
-        <img id="lightboxImg" src="" alt="Lightbox image view" loading="lazy" decoding="async" class="max-w-[90vw] max-h-[85vh] object-contain shadow-2xl rounded-sm pointer-events-auto transition-all duration-300 scale-95 opacity-0">
+        <img id="lightboxImg" src="" alt="Lightbox image view" loading="lazy" decoding="async"
+            class="max-w-[90vw] max-h-[85vh] object-contain shadow-2xl rounded-sm pointer-events-auto transition-all duration-300 scale-95 opacity-0">
     </div>
 
     <style>
@@ -1211,24 +1324,41 @@
             opacity: 1;
             pointer-events: auto;
         }
+
         #lightboxOverlay.active #lightboxImg {
             scale: 1;
             opacity: 1;
         }
-        .text-primary { color: #003366 !important; }
-        .bg-primary { background-color: #003366 !important; }
+
+        .text-primary {
+            color: #003366 !important;
+        }
+
+        .bg-primary {
+            background-color: #003366 !important;
+        }
 
         @keyframes heroFadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate-hero-fade {
             animation: heroFadeIn 1.5s ease-out forwards;
         }
+
         @media (max-width: 640px) {
-            #prevBtn, #nextBtn {
-                background: rgba(0,0,0,0.3);
+
+            #prevBtn,
+            #nextBtn {
+                background: rgba(0, 0, 0, 0.3);
                 border-radius: 50%;
                 width: 50px;
                 height: 50px;
