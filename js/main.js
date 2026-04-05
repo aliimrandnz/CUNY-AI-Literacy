@@ -17,17 +17,23 @@ if (document.querySelector('.nav-link.active')) {
     setActive(document.querySelector('.nav-link.active'));
 }
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => setActive(link));
-});
+const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership', 'faq'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
 
-// Also update active link on scroll
 const mainNav = document.getElementById('mainNav');
 const navContainer = document.getElementById('navContainer');
 const logoFull = document.getElementById('logoFull');
 const logoCompact = document.getElementById('logoCompact');
 
-const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
+let isScrollingFromClick = false;
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        isScrollingFromClick = true;
+        setActive(link);
+        // Allow scroll listener to take over after scroll completes
+        setTimeout(() => { isScrollingFromClick = false; }, 1000);
+    });
+});
 
 window.addEventListener('scroll', () => {
     // Header sticky transition
@@ -47,11 +53,20 @@ window.addEventListener('scroll', () => {
         logoCompact.classList.replace('opacity-100', 'opacity-0');
     }
 
+    if (isScrollingFromClick) return;
+
     // Current section highlighting
     let current = '';
-    sections.forEach(s => {
-        if (s.el.getBoundingClientRect().top <= 120) current = s.id;
-    });
+    const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
+
+    if (isAtBottom) {
+        current = 'faq';
+    } else {
+        sections.forEach(s => {
+            if (s.el.getBoundingClientRect().top <= 120) current = s.id;
+        });
+    }
+
     navLinks.forEach(link => {
         const href = link.getAttribute('href').replace('#', '');
         if (href === current) setActive(link);
