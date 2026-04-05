@@ -1,0 +1,15 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.tonal-architecture {
+    background-color: var(--surface);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.hero-overlay {
+    background: linear-gradient(rgba(0, 33, 111, 0.85), rgba(0, 33, 111, 0.95));
+}
