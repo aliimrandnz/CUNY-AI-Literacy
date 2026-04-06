@@ -793,12 +793,20 @@ video {
   margin-top: 3rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-auto {
@@ -1285,6 +1293,11 @@ video {
 
 .bg-\[\#1D3A83\]\/10 {
   background-color: rgb(29 58 131 / 0.1);
+}
+
+.bg-\[\#57068c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(87 6 140 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#FFB81C\] {
@@ -2018,6 +2031,11 @@ body {
 
 .hover\:bg-white\/10:hover {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.hover\:text-\[\#57068c\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(87 6 140 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-\[\#F2A900\]:hover {
