@@ -57,3 +57,6 @@ body {
         transform: translateY(-50%);
     }
 }
+
+a, button { -webkit-tap-highlight-color: transparent; }
+
