@@ -87,7 +87,7 @@
                 <img width="1200" height="497" id="logoFull" src="assets/cuny_logo_full_white.webp" alt="CUNY Logo" loading="lazy" decoding="async"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-100" />
                 <img width="1054" height="1032" id="logoCompact" src="assets/CUNY_Logo_White_RGB.webp" alt="CUNY Block Logo" loading="lazy"
-                    decoding="async"
+                    decoding="async" aria-hidden="true"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-0 pointer-events-none" />
             </a>
             <div class="hidden md:flex items-center gap-6">
@@ -118,7 +118,7 @@
         class="fixed inset-0 bg-black/50 z-40 hidden transition-opacity duration-300 opacity-0 md:hidden"></div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileDrawer" hidden
+    <div id="mobileDrawer" hidden role="dialog" aria-modal="true"
         class="fixed right-0 top-0 h-full w-64 bg-[#0033A1] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-32 px-8 gap-8 shadow-2xl border-l border-white/10">
         <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight" href="#top">Overview</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
@@ -342,7 +342,7 @@
                                         Myint Swe</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-poe" role="region" hidden
+                                <div id="faq-poe" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -377,7 +377,7 @@
                                         & Finn Grennan</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-conor" role="region" hidden
+                                <div id="faq-conor" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -449,7 +449,7 @@
                                         Frey</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-hannah" role="region" hidden
+                                <div id="faq-hannah" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -548,7 +548,7 @@
                                         Claudio Schapsis</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-claudio" role="region" hidden
+                                <div id="faq-claudio" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -618,7 +618,7 @@
                                         Santello</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-paul-santello" role="region" hidden
+                                <div id="faq-paul-santello" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -688,7 +688,7 @@
                                         Lentz</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-matt-lentz" role="region" hidden
+                                <div id="faq-matt-lentz" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -759,7 +759,7 @@
                                         Rock</span>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-daniel-rock" role="region" hidden
+                                <div id="faq-daniel-rock" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -808,7 +808,7 @@
                                     </div>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-myles-younger" role="region" hidden
+                                <div id="faq-myles-younger" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -837,7 +837,7 @@
                                     </div>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-chetan-karande" role="region" hidden
+                                <div id="faq-chetan-karande" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
@@ -866,7 +866,7 @@
                                     </div>
                                     <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
                                 </button>
-                                <div id="faq-pete-kim" role="region" hidden
+                                <div id="faq-pete-kim" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
                                     <div class="overflow-hidden">
                                         <div class="px-5 pb-5 pt-1 space-y-3 border-t border-outline-variant/10 mt-1">
