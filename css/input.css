@@ -58,5 +58,10 @@ body {
     }
 }
 
-a, button { -webkit-tap-highlight-color: transparent; }
+a, button, #mobileDrawer a { 
+    outline: none !important; 
+    box-shadow: none !important; 
+    -webkit-tap-highlight-color: transparent; 
+}
+
 
