@@ -34,6 +34,8 @@
         content="Discover the CUNY AI Literacy and Professional Readiness Series, featuring Spring 2026 industry-led sessions with NYU, IBM, and Monks. Master essential AI skills and career readiness through real-world, ethical AI applications." />
     <meta name="twitter:image" content="https://cuny-ai-series.vercel.app/assets/cuny_logo_full_white.webp" />
     <meta name="twitter:image:alt" content="CUNY AI Literacy and Professional Readiness Series banner">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -74,13 +76,14 @@
     </script>
 </head>
 
-<body class="bg-background text-on-surface selection:bg-[#a8c7fa] selection:text-[#00216f]">
+<body id="top" class="bg-background text-on-surface selection:bg-[#a8c7fa] selection:text-[#00216f]">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:p-4 focus:bg-white focus:text-[#0033A1]">Skip to main content</a>
     <!-- TopNavBar -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 bg-transparent shadow-none transition-all duration-300">
         <div id="navContainer"
             class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto transition-all duration-300">
             <!-- Logos -->
-            <a href="#" class="relative flex items-center h-full w-[260px] md:w-[320px]">
+            <a href="#top" class="relative flex items-center h-full w-[260px] md:w-[320px]">
                 <img width="1200" height="497" id="logoFull" src="assets/cuny_logo_full_white.webp" alt="CUNY Logo" loading="lazy" decoding="async"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-100" />
                 <img width="1054" height="1032" id="logoCompact" src="assets/CUNY_Logo_White_RGB.webp" alt="CUNY Block Logo" loading="lazy"
@@ -89,7 +92,7 @@
             </a>
             <div class="hidden md:flex items-center gap-6">
                 <a class="nav-link active text-white hover:text-white transition-all duration-300 font-['Inter'] text-sm font-bold tracking-tight cursor-pointer border-b-2 border-[#feb71a] pb-1"
-                    href="#">Overview</a>
+                    href="#top">Overview</a>
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] text-sm font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#sessions">Sessions</a>
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] text-sm font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
@@ -117,7 +120,7 @@
     <!-- Mobile Drawer -->
     <div id="mobileDrawer" hidden
         class="fixed right-0 top-0 h-full w-64 bg-[#0033A1] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-32 px-8 gap-8 shadow-2xl border-l border-white/10">
-        <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight" href="#">Overview</a>
+        <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight" href="#top">Overview</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
             href="#sessions">Sessions</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors"
@@ -132,7 +135,7 @@
             class="bg-[#FFB81C] text-[#003366] font-bold py-4 px-8 rounded-xl block text-center mt-10 shadow-lg transition-transform active:scale-95 no-underline">Register
             Now</a>
     </div>
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative min-h-[870px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0 scale-110">
@@ -1533,58 +1536,7 @@
             class="max-w-[90vw] max-h-[85vh] object-contain shadow-2xl rounded-sm pointer-events-auto transition-all duration-300 scale-95 opacity-0">
     </div>
 
-    <style>
-        #lightboxOverlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        #lightboxOverlay.active #lightboxImg {
-            scale: 1;
-            opacity: 1;
-        }
-
-        .text-primary {
-            color: #003366 !important;
-        }
-
-        .bg-primary {
-            background-color: #003366 !important;
-        }
-
-        @keyframes heroFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-hero-fade {
-            animation: heroFadeIn 1.5s ease-out forwards;
-        }
-
-        @media (max-width: 640px) {
-
-            #prevBtn,
-            #nextBtn {
-                background: rgba(0, 0, 0, 0.3);
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-    </style>
-
+    <!-- Removed Inline Styles - Migrated to css/input.css -->
     <script src="js/main.js"></script>
 </body>
 

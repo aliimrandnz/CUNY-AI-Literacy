@@ -7,10 +7,12 @@ function setActive(link) {
     if (!link) return;
     navLinks.forEach(l => {
         l.classList.remove('active', ...activeClasses);
+        l.removeAttribute('aria-current');
         inactiveClasses.forEach(c => l.classList.add(c));
     });
     link.classList.add('active', ...activeClasses);
     link.classList.remove(...inactiveClasses);
+    link.setAttribute('aria-current', 'page');
 }
 
 // Set initial active state
@@ -78,7 +80,10 @@ window.addEventListener('scroll', () => {
         const h = link.getAttribute('href');
         if (h) {
             const href = h.replace('#', '');
-            if (href === current) setActive(link);
+            // Handle Overview/Top case
+            if (href === current || (current === '' && (href === 'top' || href === ''))) {
+                setActive(link);
+            }
         }
     });
 });
@@ -323,8 +328,9 @@ document.addEventListener('error', (e) => {
         const img = e.target;
         if (!img.dataset.errorHandled) {
             img.dataset.errorHandled = 'true';
-            img.src = 'assets/default_avatar.png';
-            img.classList.add('is-fallback');
+            // Hide the broken image to prevent incorrect fallback (like human avatar for logo)
+            img.style.display = 'none';
+            img.classList.add('error-hidden');
         }
     }
 }, true); // Use capture phase to intercept errors during the loading process
