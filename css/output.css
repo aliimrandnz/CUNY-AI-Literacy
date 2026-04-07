@@ -1295,6 +1295,11 @@ video {
   background-color: rgb(29 58 131 / 0.1);
 }
 
+.bg-\[\#383838\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 56 56 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#57068c\] {
   --tw-bg-opacity: 1;
   background-color: rgb(87 6 140 / var(--tw-bg-opacity, 1));
@@ -1321,11 +1326,6 @@ video {
 
 .bg-black\/90 {
   background-color: rgb(0 0 0 / 0.9);
-}
-
-.bg-inverse-surface {
-  --tw-bg-opacity: 1;
-  background-color: rgb(42 49 55 / var(--tw-bg-opacity, 1));
 }
 
 .bg-outline-variant\/20 {
