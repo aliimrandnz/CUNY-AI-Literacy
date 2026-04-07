@@ -67,9 +67,9 @@
                     class="bg-[#feb71a] text-[#0033A1] px-5 py-2 m-0 rounded-lg text-sm font-bold active:opacity-80 transition-transform hover:bg-[#ffc94d] no-underline inline-block">Register
                     Now</a>
             </div>
-            <button id="mobileMenuBtn" class="md:hidden text-white hover:text-gray-200 z-[60] relative"
+            <button id="mobileMenuBtn" type="button" class="md:hidden text-white hover:text-gray-200 z-[60] relative"
                 aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileDrawer">
-                <span id="mobileMenuIcon" class="material-symbols-outlined text-3xl">menu</span>
+                <span id="mobileMenuIcon" aria-hidden="true" class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
     </nav>
@@ -134,7 +134,7 @@
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
                         <span
-                            class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">groups</span>
+                            aria-hidden="true" class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">groups</span>
                         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">800+</div>
                         <div
                             class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
@@ -143,7 +143,7 @@
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
                         <span
-                            class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">sentiment_satisfied</span>
+                            aria-hidden="true" class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">sentiment_satisfied</span>
                         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">94%</div>
                         <div
                             class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
@@ -152,7 +152,7 @@
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
                         <span
-                            class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">event_available</span>
+                            aria-hidden="true" class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">event_available</span>
                         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">217</div>
                         <div
                             class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
@@ -161,7 +161,7 @@
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
                         <span
-                            class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">hub</span>
+                            aria-hidden="true" class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2">hub</span>
                         <div
                             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-primary mb-1 md:mb-2 tracking-tight">
                             Cross-campus</div>
@@ -300,13 +300,13 @@
                             <!-- Feb 1 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-poe">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Poe
                                         Myint Swe</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-poe" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -336,13 +336,13 @@
                             <!-- Feb 2 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-conor">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Conor
                                         & Finn Grennan</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-conor" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -408,14 +408,14 @@
                             <!-- Feb 3 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-hannah">
                                     <span
                                         class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Hannah
                                         Frey</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-hannah" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -509,13 +509,13 @@
                             <!-- Mar 1 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-claudio">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Dr.
                                         Claudio Schapsis</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-claudio" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -580,13 +580,13 @@
                             <!-- Mar 2 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-paul-santello">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Paul
                                         Santello</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-paul-santello" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -651,13 +651,13 @@
                             <!-- Mar 3 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-matt-lentz">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Matt
                                         Lentz</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-matt-lentz" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -722,14 +722,14 @@
                             <!-- Mar 4 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-daniel-rock">
                                     <span
                                         class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Daniel
                                         Rock</span>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-daniel-rock" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -768,7 +768,7 @@
                             <!-- April 1 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300 relative overflow-hidden">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-myles-younger">
                                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 items-start">
@@ -779,7 +779,7 @@
                                             Younger</span>
                                     </div>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-myles-younger" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -798,7 +798,7 @@
                             <!-- April 2 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300 relative overflow-hidden">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-chetan-karande">
                                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 items-start">
@@ -809,7 +809,7 @@
                                             Karande</span>
                                     </div>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-chetan-karande" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -828,7 +828,7 @@
                             <!-- April 3 -->
                             <div
                                 class="accordion bg-white rounded-xl shadow-md hover:shadow-lg border border-outline-variant/30 group transition-all duration-300 relative overflow-hidden">
-                                <button
+                                <button type="button"
                                     class="w-full p-5 cursor-pointer flex justify-between items-start sm:items-center bg-transparent hover:bg-surface-container-lowest transition-colors rounded-xl"
                                     aria-expanded="false" aria-controls="faq-pete-kim">
                                     <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 items-start">
@@ -839,7 +839,7 @@
                                             Kim</span>
                                     </div>
                                     <span
-                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
+                                        aria-hidden="true" class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0">expand_more</span>
                                 </button>
                                 <div id="faq-pete-kim" role="region" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -877,7 +877,7 @@
                     <div class="flex flex-col">
                         <div
                             class="inline-flex items-center gap-2 bg-[#0033A1]/5 text-[#0033A1] px-4 py-1.5 rounded-full text-sm font-bold mb-6 w-fit">
-                            <span class="material-symbols-outlined text-sm">campaign</span>
+                            <span aria-hidden="true" class="material-symbols-outlined text-sm">campaign</span>
                             Current Action
                         </div>
                         <h3 class="text-2xl md:text-3xl font-bold text-[#0033A1] mb-6">Student Innovation Showcase: Call
@@ -888,7 +888,7 @@
                         </p>
 
                         <div class="mt-auto">
-                            <button
+                            <button type="button"
                                 class="w-full sm:w-fit bg-[#0033A1]/10 text-[#0033A1]/40 px-10 py-4 rounded-xl font-bold cursor-not-allowed transition-all"
                                 disabled>
                                 Project Submission Portal
@@ -905,7 +905,7 @@
                         <div class="relative z-10">
                             <div
                                 class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                <span class="material-symbols-outlined text-sm">schedule</span>
+                                <span aria-hidden="true" class="material-symbols-outlined text-sm">schedule</span>
                                 Timeline
                             </div>
                             <h3 class="text-3xl md:text-4xl font-black mb-4">Launch Target: May 2026</h3>
@@ -1325,7 +1325,7 @@
                                     onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Siddhant+Gautam&background=57068c&color=fff&size=120';">
                             </div>
                             <h3 class="text-lg font-bold text-primary mb-1">
-                                <a href="http://linkedin.com/in/gautamsiddhant/" target="_blank"
+                                <a href="https://linkedin.com/in/gautamsiddhant/" target="_blank"
                                     rel="noopener noreferrer"
                                     class="hover:text-[#57068c] transition-colors duration-300">
                                     Siddhant Gautam
@@ -1390,7 +1390,7 @@
                             <span class="text-lg font-bold text-primary">Who can attend the CUNY AI Literacy
                                 Series?</span>
                             <span
-                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                aria-hidden="true" class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             The series is primarily designed for CUNY students, faculty, and staff. Students from
@@ -1403,7 +1403,7 @@
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Are there any prerequisites required?</span>
                             <span
-                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                aria-hidden="true" class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             No prior technical experience or AI knowledge is required. The series is built to take
@@ -1415,7 +1415,7 @@
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">What is the format of the sessions?</span>
                             <span
-                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                aria-hidden="true" class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             Sessions are industry-led, hands-on, and highly interactive. They combine theory with
@@ -1428,7 +1428,7 @@
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Will I receive a badge or certificate?</span>
                             <span
-                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                aria-hidden="true" class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             Yes! Participants can earn a digital badge as part of a micro-credential pathway. This badge
@@ -1440,7 +1440,7 @@
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">How do I register?</span>
                             <span
-                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                aria-hidden="true" class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             You can register by clicking the "Register Now" button in the navigation bar or by scrolling
@@ -1453,7 +1453,7 @@
                             <span class="text-lg font-bold text-primary">Are the sessions held in-person or
                                 online?</span>
                             <span
-                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                                aria-hidden="true" class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             All of our sessions are hosted in a hybrid format! You can choose to join us in-person at
@@ -1488,7 +1488,7 @@
             </div>
             <div
                 class="pt-12 mt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm opacity-70">© 2026 CUNY AI Literacy and Professional Readiness Series. All rights
+                <p class="text-sm opacity-70">&copy; 2026 CUNY AI Literacy and Professional Readiness Series. All rights
                     reserved.</p>
                 <div class="flex items-center gap-6 shrink-0">
                     <div class="h-10 md:h-12 w-auto max-w-[150px] flex items-center justify-center shrink-0">
@@ -1514,21 +1514,21 @@
     <div id="lightboxOverlay"
         class="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
         role="dialog" aria-modal="true">
-        <button id="lightboxClose"
+        <button id="lightboxClose" type="button"
             class="absolute top-6 right-6 text-white hover:text-[#F2A900] transition-colors z-[101]" aria-label="Close gallery">
-            <span class="material-symbols-outlined text-4xl">close</span>
+            <span aria-hidden="true" class="material-symbols-outlined text-4xl">close</span>
         </button>
 
         <!-- Navigation Arrows -->
-        <button id="prevBtn"
+        <button id="prevBtn" type="button"
             class="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group" aria-label="Previous image">
             <span
-                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform">&lt;</span>
+                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform" aria-hidden="true">&lt;</span>
         </button>
-        <button id="nextBtn"
+        <button id="nextBtn" type="button"
             class="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group" aria-label="Next image">
             <span
-                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform">&gt;</span>
+                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform" aria-hidden="true">&gt;</span>
         </button>
 
         <img id="lightboxImg" src="" alt="Lightbox image view" loading="lazy" decoding="async"
