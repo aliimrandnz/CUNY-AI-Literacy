@@ -290,3 +290,18 @@ if (lightboxOverlay) {
         if (touchEndX > touchStartX + 50) showPrevImage();
     }, {passive: true});
 }
+
+// Global Image Error Handling (Local Avatar Fallback)
+// Ensures that broken profile images are securely handled locally,
+// removing dependencies on third-party remote avatar services.
+document.addEventListener('error', (e) => {
+    if (e.target.tagName && e.target.tagName.toLowerCase() === 'img') {
+        const img = e.target;
+        if (!img.dataset.errorHandled) {
+            img.dataset.errorHandled = 'true';
+            img.src = 'assets/default_avatar.png';
+            img.classList.add('is-fallback');
+        }
+    }
+}, true); // Use capture phase to intercept errors during the loading process
+
