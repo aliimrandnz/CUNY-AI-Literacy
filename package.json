@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css && mkdir -p public && cp -r assets css js index.html public/"
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css && mkdir -p public && cp -r assets css js index.html robots.txt sitemap.xml llms.txt public/"
   },
   "repository": {
     "type": "git",
