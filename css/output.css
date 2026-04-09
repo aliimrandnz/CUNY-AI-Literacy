@@ -2121,11 +2121,6 @@ a, button, #mobileDrawer a {
   color: rgb(242 169 0 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-\[\#feb71a\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(254 183 26 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
@@ -2134,6 +2129,11 @@ a, button, #mobileDrawer a {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-\[\#feb71a\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(254 183 26 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
