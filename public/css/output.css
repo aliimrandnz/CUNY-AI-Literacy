@@ -2005,7 +2005,15 @@ body {
   pointer-events: auto;
 }
 
+#lightboxImg {
+  max-width: 90%;
+  max-height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 #lightboxOverlay.active #lightboxImg {
+  display: block !important;
   scale: 1;
   opacity: 1;
 }
