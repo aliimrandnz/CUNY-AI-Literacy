@@ -260,7 +260,7 @@ function closeLightbox() {
         setTimeout(() => {
             if (!lightboxOverlay.classList.contains('active')) {
                 lightboxOverlay.setAttribute('hidden', '');
-                if (lightboxImg) lightboxImg.src = '';
+                if (lightboxImg) lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
             }
         }, 300);
     }
