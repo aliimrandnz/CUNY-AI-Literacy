@@ -219,6 +219,11 @@ function updateLightboxImage() {
         const altText = thumbImg ? thumbImg.alt : 'Lightbox image view';
         
         if (lightboxImg) {
+            // FIX: Clear any error handling states before showing the new image
+            lightboxImg.style.display = '';
+            lightboxImg.classList.remove('error-hidden');
+            delete lightboxImg.dataset.errorHandled;
+            
             lightboxImg.style.opacity = '0';
             setTimeout(() => {
                 lightboxImg.src = newSrc;
@@ -241,6 +246,11 @@ function openLightbox(index, group) {
         const item = currentGalleryGroup[currentIndex];
         const thumbImg = item.querySelector('img');
         if (lightboxImg) {
+            // FIX: Clear any error handling states before showing the image
+            lightboxImg.style.display = '';
+            lightboxImg.classList.remove('error-hidden');
+            delete lightboxImg.dataset.errorHandled;
+            
             lightboxImg.src = item.getAttribute('href');
             lightboxImg.alt = thumbImg ? thumbImg.alt : 'Lightbox image view';
         }
