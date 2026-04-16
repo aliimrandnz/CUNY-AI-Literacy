@@ -1136,6 +1136,14 @@ video {
           user-select: none;
 }
 
+.scroll-mt-28 {
+  scroll-margin-top: 7rem;
+}
+
+.scroll-mt-0 {
+  scroll-margin-top: 0px;
+}
+
 .list-none {
   list-style-type: none;
 }
