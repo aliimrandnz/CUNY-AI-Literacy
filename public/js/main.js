@@ -21,7 +21,7 @@ if (initialActive) {
     setActive(initialActive);
 }
 
-const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership', 'faq'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
+const sections = [{ id: '', el: document.body }, ...['sessions', 'highlights', 'leadership', 'faq'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
 
 const mainNav = document.getElementById('mainNav');
 const navContainer = document.getElementById('navContainer');
@@ -344,4 +344,104 @@ document.addEventListener('error', (e) => {
         }
     }
 }, true); // Use capture phase to intercept errors during the loading process
+
+// Profile Modal functionality
+const profileModalOverlay = document.getElementById('profileModalOverlay');
+const profileModalContent = document.getElementById('profileModalContent');
+const profileModalClose = document.getElementById('profileModalClose');
+const profileTriggers = document.querySelectorAll('.profile-trigger');
+const profileModalImg = document.getElementById('profileModalImg');
+const profileModalName = document.getElementById('profileModalName');
+const profileModalTitle = document.getElementById('profileModalTitle');
+const profileModalBio = document.getElementById('profileModalBio');
+
+function openProfileModal(name, title, imgSrc, bio) {
+    lastActiveElement = document.activeElement;
+    if (profileModalOverlay) {
+        profileModalOverlay.removeAttribute('hidden');
+        
+        if (profileModalImg) {
+            // FIX: Prevent cached images from remaining hidden.
+            // Clear previous states before setting new src.
+            profileModalImg.style.display = 'none';
+            profileModalImg.classList.add('error-hidden');
+            delete profileModalImg.dataset.errorHandled;
+            
+            profileModalImg.src = imgSrc;
+            
+            // Check if image is already complete (common for cached images)
+            if (profileModalImg.complete) {
+                profileModalImg.style.display = 'block';
+                profileModalImg.classList.remove('error-hidden');
+            } else {
+                profileModalImg.onload = () => {
+                    profileModalImg.style.display = 'block';
+                    profileModalImg.classList.remove('error-hidden');
+                };
+                
+                // Keep the error-hidden logic robust
+                profileModalImg.onerror = () => {
+                    profileModalImg.style.display = 'none';
+                    profileModalImg.classList.add('error-hidden');
+                    profileModalImg.dataset.errorHandled = 'true';
+                };
+            }
+        }
+        if (profileModalName) profileModalName.textContent = name;
+        if (profileModalTitle) profileModalTitle.innerHTML = title;
+        if (profileModalBio) profileModalBio.innerHTML = bio;
+        
+        // Use timeout to allow rendering before setting opacity for transition
+        setTimeout(() => {
+            profileModalOverlay.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+            profileModalOverlay.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+            if (profileModalContent) {
+                profileModalContent.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+                profileModalContent.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+            }
+        }, 10);
+        
+        if (profileModalClose) setTimeout(() => profileModalClose.focus(), 350);
+    }
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProfileModal() {
+    if (profileModalOverlay) {
+        profileModalOverlay.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+        profileModalOverlay.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        
+        if (profileModalContent) {
+            profileModalContent.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+            profileModalContent.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+        }
+        
+        setTimeout(() => {
+            if (profileModalOverlay.classList.contains('opacity-0')) {
+                profileModalOverlay.setAttribute('hidden', '');
+            }
+        }, 300);
+    }
+    document.body.style.overflow = '';
+    if (lastActiveElement) lastActiveElement.focus();
+}
+
+profileTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openProfileModal(btn.dataset.name, btn.dataset.title, btn.dataset.img, btn.dataset.bio);
+    });
+});
+
+if (profileModalClose) profileModalClose.addEventListener('click', closeProfileModal);
+if (profileModalOverlay) profileModalOverlay.addEventListener('click', (e) => {
+    if (e.target === profileModalOverlay) closeProfileModal();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (profileModalOverlay && !profileModalOverlay.hasAttribute('hidden')) {
+        if (e.key === 'Escape') closeProfileModal();
+        if (e.key === 'Tab') trapFocus(profileModalOverlay, e);
+    }
+});
 

@@ -75,20 +75,67 @@
       "endDate": "2026-04-30"
     }
     </script>
+    <style>
+        .trainer-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .trainer-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 33, 111, 0.1), 0 10px 10px -5px rgba(0, 33, 111, 0.04) !important;
+        }
+        .view-spotlight-btn {
+            border: none;
+            color: white;
+            background: #0033A1;
+            padding: 0.75rem 1.75rem !important;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: auto;
+            width: fit-content;
+        }
+        .view-spotlight-btn:hover, .view-spotlight-btn:focus {
+            background: #00216F;
+            color: white;
+            text-decoration: none !important;
+            transform: scale(1.02);
+            outline: none;
+        }
+        #profileModalBio p {
+            margin-bottom: 1rem;
+        }
+        #profileModalBio p:last-child {
+            margin-bottom: 0;
+        }
+        #sessions, #highlights, #faq, #train-the-trainer, #innovation-hub {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </head>
 
 <body id="top" class="bg-background text-on-surface selection:bg-[#a8c7fa] selection:text-[#00216f]">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:p-4 focus:bg-white focus:text-[#0033A1]">Skip to main content</a>
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:p-4 focus:bg-white focus:text-[#0033A1]">Skip
+        to main content</a>
     <!-- TopNavBar -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 bg-transparent shadow-none transition-all duration-300">
         <div id="navContainer"
             class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto transition-all duration-300">
             <!-- Logos -->
             <a href="#top" class="relative flex items-center h-full w-[260px] md:w-[320px]">
-                <img width="1200" height="497" id="logoFull" src="assets/cuny_logo_full_white.webp" alt="CUNY Logo" loading="lazy" decoding="async"
+                <img width="1200" height="497" id="logoFull" src="assets/cuny_logo_full_white.webp" alt="CUNY Logo"
+                    loading="lazy" decoding="async"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-100" />
-                <img width="1054" height="1032" id="logoCompact" src="assets/CUNY_Logo_White_RGB.webp" alt="CUNY Block Logo" loading="lazy"
-                    decoding="async" aria-hidden="true"
+                <img width="1054" height="1032" id="logoCompact" src="assets/CUNY_Logo_White_RGB.webp"
+                    alt="CUNY Block Logo" loading="lazy" decoding="async" aria-hidden="true"
                     class="absolute left-0 top-1/2 -translate-y-1/2 h-8 md:h-10 w-auto object-contain transition-opacity duration-300 opacity-0 pointer-events-none" />
             </a>
             <div class="hidden md:flex items-center gap-6">
@@ -97,7 +144,7 @@
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] text-sm font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#sessions">Sessions</a>
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] text-sm font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
-                    href="#speakers">Speakers</a>
+                    href="#highlights">Highlights</a>
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] text-sm font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
                     href="#leadership">Leadership</a>
                 <a class="nav-link text-white/80 hover:text-white transition-all duration-300 font-['Inter'] text-sm font-medium tracking-tight cursor-pointer border-b-2 border-transparent hover:border-[#feb71a] pb-1"
@@ -121,11 +168,12 @@
     <!-- Mobile Drawer -->
     <div id="mobileDrawer" hidden role="dialog" aria-modal="true"
         class="fixed right-0 top-0 h-full w-64 bg-[#0033A1] z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-32 px-8 gap-8 shadow-2xl border-l border-white/10">
-        <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight outline-none focus:outline-none focus:ring-0 active:outline-none" href="#top">Overview</a>
+        <a class="mobile-nav-link text-white text-2xl font-bold tracking-tight outline-none focus:outline-none focus:ring-0 active:outline-none"
+            href="#top">Overview</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors outline-none focus:outline-none focus:ring-0 active:outline-none"
             href="#sessions">Sessions</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors outline-none focus:outline-none focus:ring-0 active:outline-none"
-            href="#speakers">Speakers</a>
+            href="#highlights">Highlights</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors outline-none focus:outline-none focus:ring-0 active:outline-none"
             href="#leadership">Leadership</a>
         <a class="mobile-nav-link text-white/80 hover:text-white text-2xl font-medium tracking-tight transition-colors outline-none focus:outline-none focus:ring-0 active:outline-none"
@@ -140,9 +188,9 @@
         <!-- Hero Section -->
         <section class="relative min-h-[870px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0 scale-110">
-                <img width="1920" height="2100" src="assets/hero-bg-new.webp" alt="University lecture hall with students and speakers"
-                    class="w-full h-full object-cover" style="object-position: 50% 35%;" loading="eager"
-                    decoding="async">
+                <img width="1920" height="2100" src="assets/hero-bg-new.webp"
+                    alt="University lecture hall with students and speakers" class="w-full h-full object-cover"
+                    style="object-position: 50% 35%;" loading="eager" decoding="async">
                 <div class="absolute inset-0 hero-overlay"></div>
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-20 text-on-primary text-center md:text-left">
@@ -173,7 +221,8 @@
                 <div class="bg-outline-variant/20 grid grid-cols-2 md:grid-cols-4 gap-px">
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
-                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2" aria-hidden="true">groups</span>
+                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2"
+                            aria-hidden="true">groups</span>
                         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">800+</div>
                         <div
                             class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
@@ -181,7 +230,8 @@
                     </div>
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
-                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2" aria-hidden="true">sentiment_satisfied</span>
+                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2"
+                            aria-hidden="true">sentiment_satisfied</span>
                         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">94%</div>
                         <div
                             class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
@@ -189,7 +239,8 @@
                     </div>
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
-                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2" aria-hidden="true">event_available</span>
+                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2"
+                            aria-hidden="true">event_available</span>
                         <div class="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 md:mb-2">217</div>
                         <div
                             class="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-on-surface-variant leading-tight">
@@ -197,7 +248,8 @@
                     </div>
                     <div
                         class="bg-surface-container-lowest p-4 sm:p-6 md:p-8 text-center group transition-colors hover:bg-surface-container-low flex flex-col justify-start">
-                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2" aria-hidden="true">hub</span>
+                        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-1 md:mb-2"
+                            aria-hidden="true">hub</span>
                         <div
                             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-primary mb-1 md:mb-2 tracking-tight">
                             Cross-campus</div>
@@ -214,10 +266,28 @@
                 <div class="order-2 md:order-1">
                     <h2 class="text-4xl font-bold text-primary mb-8 tracking-tight">About the Initiative</h2>
                     <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
-                        <p>The CUNY AI Literacy and Professional Readiness Series is a Spring 2026 initiative led by Dr. Ngoc Cindy Pham, Associate Professor in the Department of Management, Marketing & Entrepreneurship, within Murray Koppelman School of Business at Brooklyn College.</p>
-                        <p>Supported by a grant from the <strong>CUNY AI Innovation Fund</strong> through the Office of Academic Innovation (CUNY Office of Academic Affairs), the series equips CUNY students with practical, ethical, and career-ready AI skills. The program brings together students from Brooklyn College, other CUNY campuses, and NYU Tandon School of Engineering through hands-on, industry-informed sessions that connect classroom learning with real-world applications in business, research, and career development.</p>
-                        <p>Participants earn a digital badge as part of a micro-credential pathway designed to demonstrate AI readiness to future employers. The series emphasizes critical thinking before tool adoption, ethical decision-making, applied enterprise use cases, and targeted support for first-generation and immigrant students. The initiative incorporates a <em>train-the-trainer</em> framework, empowering bootcamp graduates to teach skills such as AI-assisted web design back to their peers, extending the program's reach across the CUNY community and deepening participants' own professional development.</p>
-                        <p>The initiative is part of CUNY's broader efforts in <a href="https://www.cuny.edu/academics/ai-academic-hub/" target="_blank" rel="noopener noreferrer" class="font-bold text-[#0033A1] hover:text-[#feb71a] underline decoration-2 underline-offset-4 transition-colors duration-300">AI leadership</a> development and workforce-focused AI literacy programming.</p>
+                        <p>The CUNY AI Literacy and Professional Readiness Series is a Spring 2026 initiative led by Dr.
+                            Ngoc Cindy Pham, Associate Professor in the Department of Management, Marketing &
+                            Entrepreneurship, within Murray Koppelman School of Business at Brooklyn College.</p>
+                        <p>Supported by a grant from the <strong>CUNY AI Innovation Fund</strong> through the Office of
+                            Academic Innovation (CUNY Office of Academic Affairs), the series equips CUNY students with
+                            practical, ethical, and career-ready AI skills. The program brings together students from
+                            Brooklyn College, other CUNY campuses, and NYU Tandon School of Engineering through
+                            hands-on, industry-informed sessions that connect classroom learning with real-world
+                            applications in business, research, and career development.</p>
+                        <p>Participants earn a digital badge as part of a micro-credential pathway designed to
+                            demonstrate AI readiness to future employers. The series emphasizes critical thinking before
+                            tool adoption, ethical decision-making, applied enterprise use cases, and targeted support
+                            for first-generation and immigrant students. The initiative incorporates a
+                            <em>train-the-trainer</em> framework, empowering bootcamp graduates to teach skills such as
+                            AI-assisted web design back to their peers, extending the program's reach across the CUNY
+                            community and deepening participants' own professional development.
+                        </p>
+                        <p>The initiative is part of CUNY's broader efforts in <a
+                                href="https://www.cuny.edu/academics/ai-academic-hub/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="font-bold text-[#0033A1] hover:text-[#feb71a] underline decoration-2 underline-offset-4 transition-colors duration-300">AI
+                                leadership</a> development and workforce-focused AI literacy programming.</p>
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
@@ -244,8 +314,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-24">
                     <!-- Card 1 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img width="960" height="1200" src="assets/featured_sessions/2.webp" alt="Conor Grennan presenting" loading="lazy"
-                            decoding="async"
+                        <img width="960" height="1200" src="assets/featured_sessions/2.webp"
+                            alt="Conor Grennan presenting" loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover object-[center_10%] transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
                         </div>
@@ -258,8 +328,8 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0548.webp" alt="AI in Business & Marketing Event Hall"
-                            loading="lazy" decoding="async"
+                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0548.webp"
+                            alt="AI in Business & Marketing Event Hall" loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
                         </div>
@@ -271,8 +341,8 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img width="1200" height="1392" src="assets/featured_sessions/Matt_Lentz/2.webp" alt="Matt Lentz (.Monks) session in action"
-                            loading="lazy" decoding="async"
+                        <img width="1200" height="1392" src="assets/featured_sessions/Matt_Lentz/2.webp"
+                            alt="Matt Lentz (.Monks) session in action" loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
                         </div>
@@ -284,7 +354,8 @@
                     </div>
                     <!-- Card 4 -->
                     <div class="group relative rounded-2xl overflow-hidden shadow-lg h-72 md:h-80 cursor-pointer">
-                        <img width="1200" height="1799" src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1118.webp"
+                        <img width="1200" height="1799"
+                            src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1118.webp"
                             alt="Paul Santello session on AI in Marketing" loading="lazy" decoding="async"
                             class="absolute inset-0 w-full h-full object-cover object-[center_20%] transition-transform duration-700 ease-out group-hover:scale-105" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,30,0.9)] to-[rgba(0,0,30,0)]">
@@ -298,7 +369,7 @@
                     </div>
                 </div>
                 <!-- Monthly Highlights Grid -->
-                <h3 class="text-3xl font-bold text-primary mb-8 text-center" id="speakers">Speaker Highlights</h3>
+                <h3 class="text-3xl font-bold text-primary mb-8 text-center" id="highlights">Speaker Highlights</h3>
 
                 <!-- Impact Banner -->
                 <div
@@ -330,7 +401,9 @@
                                     aria-expanded="false" aria-controls="faq-poe">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Poe
                                         Myint Swe</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-poe" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -348,7 +421,8 @@
                                             <!-- Poe Myint Swe Event Gallery -->
                                             <a href="assets/featured_sessions/Poe/Poe.webp"
                                                 class="gallery-item block w-full rounded-xl mt-4 overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group shadow-sm hover:shadow-md cursor-pointer">
-                                                <img width="1200" height="1550" src="assets/featured_sessions/Poe/Poe.webp" loading="lazy"
+                                                <img width="1200" height="1550"
+                                                    src="assets/featured_sessions/Poe/Poe.webp" loading="lazy"
                                                     decoding="async"
                                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                     alt="Poe Myint Swe session photo">
@@ -365,7 +439,9 @@
                                     aria-expanded="false" aria-controls="faq-conor">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Conor
                                         & Finn Grennan</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-conor" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -387,7 +463,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/1.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/1.webp" loading="lazy"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/1.webp" loading="lazy"
                                                             decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 1">
@@ -397,7 +474,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/2.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="960" height="1200" src="assets/featured_sessions/2.webp" loading="lazy"
+                                                        <img width="960" height="1200"
+                                                            src="assets/featured_sessions/2.webp" loading="lazy"
                                                             decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 2">
@@ -407,7 +485,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/3.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="960" height="1200" src="assets/featured_sessions/3.webp" loading="lazy"
+                                                        <img width="960" height="1200"
+                                                            src="assets/featured_sessions/3.webp" loading="lazy"
                                                             decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 3">
@@ -417,7 +496,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/4.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="960" height="1200" src="assets/featured_sessions/4.webp" loading="lazy"
+                                                        <img width="960" height="1200"
+                                                            src="assets/featured_sessions/4.webp" loading="lazy"
                                                             decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Event session photo 4">
@@ -437,7 +517,9 @@
                                     <span
                                         class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Hannah
                                         Frey</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-hannah" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -457,7 +539,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/IBM/063A0473.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0473.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/IBM/063A0473.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 1">
@@ -467,7 +550,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/IBM/063A0433.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0433.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/IBM/063A0433.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 2">
@@ -477,7 +561,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/IBM/063A0444.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0444.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/IBM/063A0444.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 3">
@@ -487,7 +572,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/IBM/063A0462.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0462.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/IBM/063A0462.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 4">
@@ -497,7 +583,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/IBM/063A0482.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0482.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/IBM/063A0482.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 5">
@@ -507,7 +594,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/IBM/063A0548.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/IBM/063A0548.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/IBM/063A0548.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="IBM session photo 6">
@@ -536,7 +624,9 @@
                                     aria-expanded="false" aria-controls="faq-claudio">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Dr.
                                         Claudio Schapsis</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-claudio" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -567,7 +657,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Claudio/IMG_2225.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="821" src="assets/featured_sessions/Claudio/IMG_2225.webp"
+                                                        <img width="1200" height="821"
+                                                            src="assets/featured_sessions/Claudio/IMG_2225.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Claudio Schapsis session photo 2">
@@ -577,7 +668,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Claudio/IMG_2226.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1174" height="896" src="assets/featured_sessions/Claudio/IMG_2226.webp"
+                                                        <img width="1174" height="896"
+                                                            src="assets/featured_sessions/Claudio/IMG_2226.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Claudio Schapsis session photo 3">
@@ -587,7 +679,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Claudio/IMG_2227.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="712" src="assets/featured_sessions/Claudio/IMG_2227.webp"
+                                                        <img width="1200" height="712"
+                                                            src="assets/featured_sessions/Claudio/IMG_2227.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Claudio Schapsis session photo 4">
@@ -606,7 +699,9 @@
                                     aria-expanded="false" aria-controls="faq-paul-santello">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Paul
                                         Santello</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-paul-santello" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -627,7 +722,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1050.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 1">
@@ -637,7 +733,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1057.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 2">
@@ -647,7 +744,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1133.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 3">
@@ -657,7 +755,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="800" src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.webp"
+                                                        <img width="1200" height="800"
+                                                            src="assets/featured_sessions/Paul Santello/AI Reshaping Marketing and Advertising Tools_1104.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Paul Santello session photo 4">
@@ -676,7 +775,9 @@
                                     aria-expanded="false" aria-controls="faq-matt-lentz">
                                     <span class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Matt
                                         Lentz</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-matt-lentz" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -697,7 +798,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Matt_Lentz/1.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="1600" src="assets/featured_sessions/Matt_Lentz/1.webp"
+                                                        <img width="1200" height="1600"
+                                                            src="assets/featured_sessions/Matt_Lentz/1.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 1">
@@ -707,7 +809,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Matt_Lentz/2.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="1392" src="assets/featured_sessions/Matt_Lentz/2.webp"
+                                                        <img width="1200" height="1392"
+                                                            src="assets/featured_sessions/Matt_Lentz/2.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 2">
@@ -717,7 +820,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Matt_Lentz/3.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="852" src="assets/featured_sessions/Matt_Lentz/3.webp"
+                                                        <img width="1200" height="852"
+                                                            src="assets/featured_sessions/Matt_Lentz/3.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 3">
@@ -727,7 +831,8 @@
                                                     class="aspect-square rounded-lg overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group/token shadow-sm hover:shadow-md cursor-pointer">
                                                     <a href="assets/featured_sessions/Matt_Lentz/4.webp"
                                                         class="gallery-item block w-full h-full">
-                                                        <img width="1200" height="1603" src="assets/featured_sessions/Matt_Lentz/4.webp"
+                                                        <img width="1200" height="1603"
+                                                            src="assets/featured_sessions/Matt_Lentz/4.webp"
                                                             loading="lazy" decoding="async"
                                                             class="w-full h-full object-cover transition-transform duration-500 group-hover/token:scale-110"
                                                             alt="Matt Lentz session photo 4">
@@ -747,7 +852,9 @@
                                     <span
                                         class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Daniel
                                         Rock</span>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-daniel-rock" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -765,7 +872,8 @@
                                             <!-- Daniel Rock Event Gallery -->
                                             <a href="assets/featured_sessions/Daniel/Daniel.webp"
                                                 class="gallery-item block w-full rounded-xl mt-4 overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group shadow-sm hover:shadow-md cursor-pointer">
-                                                <img width="1200" height="1552" src="assets/featured_sessions/Daniel/Daniel.webp" loading="lazy"
+                                                <img width="1200" height="1552"
+                                                    src="assets/featured_sessions/Daniel/Daniel.webp" loading="lazy"
                                                     decoding="async"
                                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                     alt="Daniel Rock session photo">
@@ -796,7 +904,9 @@
                                             class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Myles
                                             Younger</span>
                                     </div>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-myles-younger" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -808,6 +918,15 @@
                                             <p class="text-sm text-on-surface-variant leading-relaxed">
                                                 Chief Growth Officer, U of Digital
                                             </p>
+                                            <!-- Myles Younger Event Gallery -->
+                                            <a href="assets/featured_sessions/Myles_Younger/myles_younger.jpeg"
+                                                class="gallery-item block w-full rounded-xl mt-4 overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group shadow-sm hover:shadow-md cursor-pointer">
+                                                <img width="1200" height="1550"
+                                                    src="assets/featured_sessions/Myles_Younger/myles_younger.jpeg"
+                                                    loading="lazy" decoding="async"
+                                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                    alt="Myles Younger session photo">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -825,7 +944,9 @@
                                             class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Chetan
                                             Karande</span>
                                     </div>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-chetan-karande" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -854,7 +975,9 @@
                                             class="font-black text-on-surface text-left pr-4 text-lg tracking-tight">Pete
                                             Kim</span>
                                     </div>
-                                    <span class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none" aria-hidden="true">expand_more</span>
+                                    <span
+                                        class="material-symbols-outlined text-outline-variant transition-transform duration-300 transform group-[.is-open]:rotate-180 flex-shrink-0 select-none"
+                                        aria-hidden="true">expand_more</span>
                                 </button>
                                 <div id="faq-pete-kim" hidden
                                     class="grid grid-rows-[0fr] opacity-0 transition-all duration-300 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100">
@@ -868,6 +991,15 @@
                                                 <br>
                                                 Hosted at NYU Tandon
                                             </p>
+                                            <!-- Pete Kim Event Gallery -->
+                                            <a href="assets/featured_sessions/Pete_Kim/pete_kim.jpeg"
+                                                class="gallery-item block w-full rounded-xl mt-4 overflow-hidden border border-[#0033A1]/20 hover:border-[#0033A1] transition-all group shadow-sm hover:shadow-md cursor-pointer">
+                                                <img width="1200" height="1550"
+                                                    src="assets/featured_sessions/Pete_Kim/pete_kim.jpeg" loading="lazy"
+                                                    decoding="async"
+                                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                    alt="Pete Kim session photo">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -878,6 +1010,506 @@
             </div>
             </div>
         </section>
+
+        <!-- Train-the-Trainer Spotlights -->
+        <section class="py-40 md:py-48 bg-background relative z-40" id="train-the-trainer">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Train-the-Trainer Spotlights</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12">
+                    <!-- Trainer 1: Ali Imran Deniz -->
+                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Ali_Deniz.webp" alt="Ali Imran Deniz" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Ali Imran Deniz</h3>
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Data Analytics Student, Brooklyn College <br> Lead Developer and Event Coordinator</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" 
+                            data-name="Ali Imran Deniz" 
+                            data-title="Data Analytics Student, Brooklyn College &lt;br&gt; Lead Developer and Event Coordinator" 
+                            data-img="assets/trainer_highlights/Ali_Deniz.webp"
+                            data-bio="&lt;p&gt;Ali's journey reflects the transformative power of applied AI learning. When he joined the program, he was still exploring how AI could fit into his academic and professional path. Through the bootcamps, he quickly adopted AI tools as a creative and technical partner.&lt;/p&gt;&lt;p&gt;Within a short period of time, he independently taught himself new skills and built the full professional website for the CUNY AI Literacy and Professional Readiness Series. The platform now serves as a central hub for events, student engagement, and program visibility across CUNY.&lt;/p&gt;&lt;p&gt;Ali did not just learn and build. This May, he steps into the role of workshop host, leading his own AI session titled &quot;AI-Assisted Web Development: From Prompt to Production&quot; and sharing what he built directly with other students. His path from first-time participant to developer to educator shows what becomes possible when AI literacy is applied with purpose and confidence.&lt;/p&gt;">View Spotlight</button>
+                    </div>
+                    <!-- Trainer 2: Tülay Altın -->
+                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Tulay_altin.jpeg" alt="Tulay Altin" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Tulay Altin</h3>
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">MA Candidate in Digital Humanities, CUNY Graduate Center</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" 
+                            data-name="Tulay Altin" 
+                            data-title="MA Candidate in Digital Humanities, CUNY Graduate Center" 
+                            data-img="assets/trainer_highlights/Tulay_altin.jpeg"
+                            data-bio="&lt;p&gt;Tülay is one of the most dedicated participants in the CUNY AI Literacy and Professional Readiness Series. She attended every session and earned all available badges, demonstrating both consistency and commitment to mastering AI literacy.&lt;/p&gt;&lt;p&gt;Building on her interdisciplinary background in digital humanities and teaching, she is now developing a beginner-level micro-credential focused on AI for behavioral health professionals. Her work explores how AI can support practitioners in understanding, communicating, and delivering care more effectively.&lt;/p&gt;&lt;p&gt;What began as a learning journey has become a teaching mission. Tülay is now creating educational pathways for others, extending the reach of AI literacy into specialized professional fields beyond the classroom.&lt;/p&gt;">View Spotlight</button>
+                    </div>
+                    <!-- Trainer 3: Damir Shavkatov -->
+                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Damir.webp" alt="Damir Shavkatov" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Damir Shavkatov</h3>
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Psychology Major, Brooklyn College <br> Vice Chair for Senior College Affairs, USS</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" 
+                            data-name="Damir Shavkatov" 
+                            data-title="Psychology Major, Brooklyn College &lt;br&gt; Vice Chair for Senior College Affairs, USS" 
+                            data-img="assets/trainer_highlights/Damir.webp"
+                            data-bio="&lt;p&gt;Damir began as a participant in the LinkedIn improvement workshop on personal branding and quickly became one of the program's most active contributors. He transitioned into a peer mentor role, guiding fellow students on LinkedIn optimization, digital presence, career positioning, and research projects.&lt;/p&gt;&lt;p&gt;His academic impact extended further when he co-authored a research paper with Professor Pham titled &quot;How Accessible Public Universities Can Enhance Social Mobility Through Comprehensive Support Services,&quot; published in the Northeast Journal of Legal Studies (Feb 2026). He also serves as a research mentor for peers, helping students develop their own scholarly work.&lt;/p&gt;&lt;p&gt;As a first-generation student and campus leader, Damir represented CUNY students at the United Nations Youth Conference in April 2026 and was selected for the Bloomberg x Basta mentoring program. He took what he learned and immediately put it to work for others, on campus, in CUNY and on a global stage.&lt;/p&gt;">View Spotlight</button>
+                    </div>
+                    <!-- Trainer 4: Jason Lin -->
+                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Jason.webp" alt="Jason Lin" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Jason Lin</h3>
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Business Administration Student, Brooklyn College</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" 
+                            data-name="Jason Lin" 
+                            data-title="Business Administration Student, Brooklyn College" 
+                            data-img="assets/trainer_highlights/Jason.webp"
+                            data-bio="&lt;p&gt;Jason has always believed that if you can figure something out, you have a responsibility to help others do the same. As a first-year student at Brooklyn College, he created a YouTube tutoring series for his marketing simulation class that earned thousands of views from classmates and students well beyond campus. That instinct to share what he knows did not stop there.&lt;/p&gt;&lt;p&gt;As a dedicated participant in the CUNY AI Literacy and Professional Readiness Series, Jason attended sessions consistently and provided detailed, thoughtful feedback after each one. His observations helped sharpen the structure and delivery of the program itself. He then took that engagement a step further, becoming a research mentor for peers alongside Damir Shavkatov, guiding fellow students through their own scholarly work.&lt;/p&gt;&lt;p&gt;In Spring 2026, Jason co-received the Tow Undergraduate Research Grant alongside Professor Pham to study how AI bootcamps shape student learning, AI literacy, and career readiness across CUNY. A student who once helped classmates finish a simulation is now helping define what AI education should look like for an entire generation of public university students.&lt;/p&gt;">View Spotlight</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership & AI Team Section -->
+        <section class="py-32 bg-surface-container-lowest scroll-mt-0" id="leadership">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Leadership &amp; AI Team
+                    </h2>
+                    <p class="mt-4 text-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">Meet the dedicated team
+                        making the CUNY AI Literacy initiative possible.</p>
+                </div>
+
+                <!-- Professor Row -->
+                <div class="flex justify-center mb-8 md:mb-12">
+                    <div
+                        class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center max-w-md w-full hover:shadow-md transition-all md:hover:-translate-y-1">
+                        <div
+                            class="mx-auto w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-md bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/Cindy_Pham.webp" alt="Dr. Ngoc Cindy Pham"
+                                loading="lazy" decoding="async" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-1">
+                            <a href="https://www.linkedin.com/in/dr-ngoc-cindy-pham-78b53519b/" target="_blank"
+                                rel="noopener noreferrer" class="hover:text-[#F2A900] transition-colors duration-300">
+                                Dr. Ngoc Cindy Pham
+                                <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                        </h3>
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-3">Associate Professor
+                            &amp; Initiative Lead</div>
+                        <div class="text-on-surface-variant text-sm font-medium">
+                            <a href="https://www.brooklyn.edu/faculty-staff/ngoc-cindy-pham/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="hover:text-[#F2A900] underline decoration-primary/20 underline-offset-4 hover:decoration-[#F2A900] transition-all duration-300">
+                                CUNY AI Center of Excellence - Brooklyn College
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Student Leaders -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student
+                        Leaders</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="1200" height="1200" src="assets/Zaineb.webp" alt="Zaineb Cheema"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/zaineb-cheema/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Zaineb Cheema
+                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
+                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">LEAD
+                                ORGANIZER & VIRTUAL OPERATIONS</div>
+                            <div class="text-on-surface-variant text-sm font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="800" height="800" src="assets/Hibah.webp" alt="Hibah Zeinab" loading="lazy"
+                                    decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/hibah-zeinab/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Hibah Zeinab
+                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
+                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">LEAD
+                                ORGANIZER & MODERATOR</div>
+                            <div class="text-on-surface-variant text-sm font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="800" height="800" src="assets/William.webp" alt="William Sanchez"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/bkace/" target="_blank" rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    William Sanchez
+                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
+                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">LEAD
+                                ORGANIZER & MODERATOR</div>
+                            <div class="text-on-surface-variant text-sm font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 3: Student Team -->
+                <div>
+                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student
+                        Team</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center">
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="1200" height="1200" src="assets/Ali_Deniz.webp" alt="Ali Imran Deniz"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/aliimrandnz/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Ali Imran Deniz
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">WEB
+                                DEVELOPMENT & EVENT COORDINATOR</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="684" height="684" src="assets/Jason.webp" alt="Jason Lin" loading="lazy"
+                                    decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/jason-lin-b6b02b201/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Jason Lin
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">OPERATIONS &
+                                MEDIA COORDINATOR</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="1200" height="1200" src="assets/Madia.webp" alt="Madia Azimi" loading="lazy"
+                                    decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/madia-azimi/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Madia Azimi
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">EVENT
+                                COORDINATOR & VIRTUAL OPERATIONS</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="301" height="301" src="assets/Ruhshona.webp" alt="Ruhshona Sayfiddinova"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/ruhshona-sayfiddinova-621401360/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Ruhshona Sayfiddinova
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">EVENT
+                                COORDINATOR</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="444" height="444" src="assets/Juan.webp" alt="Juan Solis Cazares"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/juan-carlos-solis-cazares-a50a51356/"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Juan Solis Cazares
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">PARTNERSHIPS
+                                & EVENT COORDINATOR</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="632" height="632" src="assets/Ines.webp" alt="Ines Bakir" loading="lazy"
+                                    decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/ines-bakir/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Ines Bakir
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">MARKETING
+                                &amp;
+                                OUTREACH COORDINATOR</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="800" height="800" src="assets/Damir.webp" alt="Damir Shavkatov"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/damir-shavkatov/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Damir Shavkatov
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">CUNY LIAISON
+                                & PROGRAM AMBASSADOR</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="1080" height="1080" src="assets/Odil.webp" alt="Odil Nuriddinov"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-base font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/odil-nuriddinov-a63b61315/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#F2A900] transition-colors duration-300">
+                                    Odil Nuriddinov
+                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">PROGRAM
+                                ASSOCIATE</div>
+                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NYU Tandon Section -->
+                <div class="mt-24">
+                    <h3 class="text-2xl font-bold text-center text-[#003366]">NYU Tandon Collaborating Faculty & Student
+                        Leaders</h3>
+                    <div class="w-24 h-1 bg-[#57068c] mx-auto mt-4 rounded-full"></div>
+
+                    <!-- Row 1: Professor -->
+                    <div class="flex justify-center mt-12">
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center max-w-md w-full hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-md bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="500" height="500" src="assets/Dr.Liu.webp" alt="Dr. Shizhu Liu"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/shizhu/" target="_blank" rel="noopener noreferrer"
+                                    class="hover:text-[#57068c] transition-colors duration-300">
+                                    Dr. Shizhu Liu
+                                    <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-3">
+                                <span class="block">Deputy Director</span>
+                                <span class="block">Industry Associate Professor</span>
+                                <span class="block">M.S. in Management of Technology (MOT) program</span>
+                            </div>
+                            <div class="text-on-surface-variant text-sm font-medium">NYU Tandon School of Engineering
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Student Leaders & Team -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-8">
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="579" height="579" src="assets/Harshit Malik.webp" alt="Harshit Malik"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/in/harshit-malik-nyu/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#57068c] transition-colors duration-300">
+                                    Harshit Malik
+                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
+                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">
+                                <a href="https://www.linkedin.com/company/nyutandongsc" target="_blank"
+                                    rel="noopener noreferrer" class="hover:underline cursor-pointer">
+                                    President, NYU Tandon Graduate Student Council
+                                </a>
+                            </div>
+                            <div class="text-on-surface-variant text-sm font-medium mt-auto">NYU Tandon School of
+                                Engineering
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="780" height="780" src="assets/Siddhant Gautam.webp" alt="Siddhant Gautam"
+                                    loading="lazy" decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-bold text-primary mb-1">
+                                <a href="https://linkedin.com/in/gautamsiddhant/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#57068c] transition-colors duration-300">
+                                    Siddhant Gautam
+                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
+                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">
+                                <a href="https://www.linkedin.com/company/techshrm/" target="_blank"
+                                    rel="noopener noreferrer" class="hover:underline cursor-pointer">
+                                    President, TechSHRM
+                                </a>
+                            </div>
+                            <div class="text-on-surface-variant text-sm font-medium mt-auto">NYU Tandon School of
+                                Engineering
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
+                            <div
+                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                                <img width="736" height="736" src="assets/TCC.webp" alt="TCC Team" loading="lazy"
+                                    decoding="async" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-1">
+                                <a href="https://www.linkedin.com/groups/13882604/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="hover:text-[#57068c] transition-colors duration-300">
+                                    TCC Team
+                                    <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                </a>
+                            </h3>
+                            <div class="text-on-surface-variant text-sm font-medium mt-auto">NYU Tandon School of
+                                Engineering
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Student Leadership & Showcase -->
         <section class="py-32 px-8 max-w-7xl mx-auto" id="innovation-hub">
             <div
@@ -939,444 +1571,8 @@
             </div>
         </section>
 
-        <!-- Leadership & AI Team Section -->
-        <section class="py-32 bg-surface-container-lowest" id="leadership">
-            <div class="max-w-5xl mx-auto px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Leadership &amp; AI Team
-                    </h2>
-                    <p class="mt-4 text-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">Meet the dedicated team
-                        making the CUNY AI Literacy initiative possible.</p>
-                </div>
-
-                <!-- Professor Row -->
-                <div class="flex justify-center mb-8 md:mb-12">
-                    <div
-                        class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center max-w-md w-full hover:shadow-md transition-all md:hover:-translate-y-1">
-                        <div
-                            class="mx-auto w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-md bg-surface-container-highest flex items-center justify-center shrink-0">
-                            <img width="1200" height="1200" src="assets/Cindy_Pham.webp" alt="Dr. Ngoc Cindy Pham" loading="lazy" decoding="async"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-2xl font-bold text-primary mb-1">
-                            <a href="https://www.linkedin.com/in/dr-ngoc-cindy-pham-78b53519b/" target="_blank"
-                                rel="noopener noreferrer" class="hover:text-[#F2A900] transition-colors duration-300">
-                                Dr. Ngoc Cindy Pham
-                                <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
-                            </a>
-                        </h3>
-                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-3">Associate Professor
-                            &amp; Initiative Lead</div>
-                        <div class="text-on-surface-variant text-sm font-medium">
-                            <a href="https://www.brooklyn.edu/faculty-staff/ngoc-cindy-pham/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="hover:text-[#F2A900] underline decoration-primary/20 underline-offset-4 hover:decoration-[#F2A900] transition-all duration-300">
-                                CUNY AI Center of Excellence - Brooklyn College
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tier 2: Student Leaders -->
-                <div class="mb-12">
-                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student
-                        Leaders</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="1200" height="1200" src="assets/Zaineb.webp" alt="Zaineb Cheema" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-lg font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/zaineb-cheema/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Zaineb Cheema
-                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
-                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">LEAD
-                                ORGANIZER & VIRTUAL OPERATIONS</div>
-                            <div class="text-on-surface-variant text-sm font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="800" height="800" src="assets/Hibah.webp" alt="Hibah Zeinab" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-lg font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/hibah-zeinab/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Hibah Zeinab
-                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
-                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">LEAD
-                                ORGANIZER & MODERATOR</div>
-                            <div class="text-on-surface-variant text-sm font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="800" height="800" src="assets/William.webp" alt="William Sanchez" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-lg font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/bkace/" target="_blank" rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    William Sanchez
-                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
-                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">LEAD
-                                ORGANIZER & MODERATOR</div>
-                            <div class="text-on-surface-variant text-sm font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tier 3: Student Team -->
-                <div>
-                    <h3 class="text-xl font-bold text-center text-primary/80 uppercase tracking-widest mb-6">Student
-                        Team</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-center">
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="1200" height="1200" src="assets/Ali_Deniz.webp" alt="Ali Imran Deniz" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/aliimrandnz/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Ali Imran Deniz
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">WEB
-                                DEVELOPMENT & EVENT COORDINATOR</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="684" height="684" src="assets/Jason.webp" alt="Jason Lin" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/jason-lin-b6b02b201/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Jason Lin
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">OPERATIONS &
-                                MEDIA COORDINATOR</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="1200" height="1200" src="assets/Madia.webp" alt="Madia Azimi" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/madia-azimi/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Madia Azimi
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">EVENT
-                                COORDINATOR & VIRTUAL OPERATIONS</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="301" height="301" src="assets/Ruhshona.webp" alt="Ruhshona Sayfiddinova" loading="lazy"
-                                    decoding="async" class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/ruhshona-sayfiddinova-621401360/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Ruhshona Sayfiddinova
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">EVENT
-                                COORDINATOR</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="444" height="444" src="assets/Juan.webp" alt="Juan Solis Cazares" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/juan-carlos-solis-cazares-a50a51356/"
-                                    target="_blank" rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Juan Solis Cazares
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">PARTNERSHIPS
-                                & EVENT COORDINATOR</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="632" height="632" src="assets/Ines.webp" alt="Ines Bakir" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/ines-bakir/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Ines Bakir
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">MARKETING
-                                &amp;
-                                OUTREACH COORDINATOR</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="800" height="800" src="assets/Damir.webp" alt="Damir Shavkatov" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/damir-shavkatov/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Damir Shavkatov
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">CUNY LIAISON
-                                & PROGRAM AMBASSADOR</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-2xl p-6 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-4 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="1080" height="1080" src="assets/Odil.webp" alt="Odil Nuriddinov" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h4 class="text-base font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/odil-nuriddinov-a63b61315/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#F2A900] transition-colors duration-300">
-                                    Odil Nuriddinov
-                                    <svg class="w-3 h-3 inline-block ml-1.5 align-middle -mt-0.5" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h4>
-                            <div class="text-secondary font-bold tracking-widest text-[9px] uppercase mb-2">PROGRAM
-                                ASSOCIATE</div>
-                            <div class="text-on-surface-variant text-xs font-medium mt-auto">Brooklyn College</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NYU Tandon Section -->
-                <div class="mt-24">
-                    <h3 class="text-2xl font-bold text-center text-[#003366]">NYU Tandon Collaborating Faculty & Student
-                        Leaders</h3>
-                    <div class="w-24 h-1 bg-[#57068c] mx-auto mt-4 rounded-full"></div>
-
-                    <!-- Row 1: Professor -->
-                    <div class="flex justify-center mt-12">
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col items-center text-center max-w-md w-full hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-md bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="500" height="500" src="assets/Dr.Liu.webp" alt="Dr. Shizhu Liu" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-2xl font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/shizhu/" target="_blank" rel="noopener noreferrer"
-                                    class="hover:text-[#57068c] transition-colors duration-300">
-                                    Dr. Shizhu Liu
-                                    <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-3">
-                                <span class="block">Deputy Director</span>
-                                <span class="block">Industry Associate Professor</span>
-                                <span class="block">M.S. in Management of Technology (MOT) program</span>
-                            </div>
-                            <div class="text-on-surface-variant text-sm font-medium">NYU Tandon School of Engineering
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Row 2: Student Leaders & Team -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-8">
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="579" height="579" src="assets/Harshit Malik.webp" alt="Harshit Malik" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-lg font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/in/harshit-malik-nyu/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#57068c] transition-colors duration-300">
-                                    Harshit Malik
-                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
-                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">
-                                <a href="https://www.linkedin.com/company/nyutandongsc" target="_blank"
-                                    rel="noopener noreferrer" class="hover:underline cursor-pointer">
-                                    President, NYU Tandon Graduate Student Council
-                                </a>
-                            </div>
-                            <div class="text-on-surface-variant text-sm font-medium mt-auto">NYU Tandon School of
-                                Engineering
-                            </div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="780" height="780" src="assets/Siddhant Gautam.webp" alt="Siddhant Gautam" loading="lazy"
-                                    decoding="async" class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-lg font-bold text-primary mb-1">
-                                <a href="https://linkedin.com/in/gautamsiddhant/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#57068c] transition-colors duration-300">
-                                    Siddhant Gautam
-                                    <svg class="w-3.5 h-3.5 inline-block ml-1.5 align-middle -mt-0.5"
-                                        fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-secondary font-bold tracking-widest text-[10px] uppercase mb-3">
-                                <a href="https://www.linkedin.com/company/techshrm/" target="_blank"
-                                    rel="noopener noreferrer" class="hover:underline cursor-pointer">
-                                    President, TechSHRM
-                                </a>
-                            </div>
-                            <div class="text-on-surface-variant text-sm font-medium mt-auto">NYU Tandon School of
-                                Engineering
-                            </div>
-                        </div>
-                        <div
-                            class="bg-surface-container rounded-3xl p-8 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center hover:shadow-md transition-all md:hover:-translate-y-1">
-                            <div
-                                class="mx-auto w-20 h-20 md:w-[120px] md:h-[120px] rounded-full overflow-hidden mb-5 border-[2px] md:border-[3px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                                <img width="736" height="736" src="assets/TCC.webp" alt="TCC Team" loading="lazy" decoding="async"
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-2xl font-bold text-primary mb-1">
-                                <a href="https://www.linkedin.com/groups/13882604/" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:text-[#57068c] transition-colors duration-300">
-                                    TCC Team
-                                    <svg class="w-4 h-4 inline-block ml-2 align-middle -mt-1" fill="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                    </svg>
-                                </a>
-                            </h3>
-                            <div class="text-on-surface-variant text-sm font-medium mt-auto">NYU Tandon School of
-                                Engineering
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <!-- FAQ Section -->
-        <section class="py-24 bg-background" id="faq">
+        <section class="py-24 bg-background min-h-[80vh]" id="faq">
             <div class="max-w-4xl mx-auto px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
@@ -1388,7 +1584,9 @@
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Who can attend the CUNY AI Literacy
                                 Series?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none" aria-hidden="true">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none"
+                                aria-hidden="true">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             The series is primarily designed for CUNY students, faculty, and staff. Students from
@@ -1400,7 +1598,9 @@
                         class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Are there any prerequisites required?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none" aria-hidden="true">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none"
+                                aria-hidden="true">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             No prior technical experience or AI knowledge is required. The series is built to take
@@ -1411,7 +1611,9 @@
                         class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">What is the format of the sessions?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none" aria-hidden="true">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none"
+                                aria-hidden="true">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             Sessions are industry-led, hands-on, and highly interactive. They combine theory with
@@ -1423,7 +1625,9 @@
                         class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Will I receive a badge or certificate?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none" aria-hidden="true">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none"
+                                aria-hidden="true">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             Yes! Participants can earn a digital badge as part of a micro-credential pathway. This badge
@@ -1434,7 +1638,9 @@
                         class="group bg-surface-container rounded-xl overflow-hidden transition-all duration-300 border border-outline-variant/30">
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">How do I register?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none" aria-hidden="true">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none"
+                                aria-hidden="true">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             You can register by clicking the "Register Now" button in the navigation bar or by scrolling
@@ -1446,7 +1652,9 @@
                         <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
                             <span class="text-lg font-bold text-primary">Are the sessions held in-person or
                                 online?</span>
-                            <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none" aria-hidden="true">expand_more</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 select-none"
+                                aria-hidden="true">expand_more</span>
                         </summary>
                         <div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
                             All of our sessions are hosted in a hybrid format! You can choose to join us in-person at
@@ -1473,7 +1681,8 @@
                     <div class="text-2xl font-black mb-2 uppercase tracking-tighter">CUNY AI Literacy</div>
                     <p class="text-white/60 text-sm mb-6 max-w-md">Empowering the world's largest urban university
                         system with the essential skills for the artificial intelligence era.</p>
-                    <a class="text-secondary-container hover:underline font-medium text-sm" href="mailto:NgocCindy.Pham@brooklyn.cuny.edu">Contact
+                    <a class="text-secondary-container hover:underline font-medium text-sm"
+                        href="mailto:NgocCindy.Pham@brooklyn.cuny.edu">Contact
                         Us</a>
                 </div>
             </div>
@@ -1485,15 +1694,15 @@
                     <div class="h-10 md:h-12 w-auto max-w-[150px] flex items-center justify-center shrink-0">
                         <a href="https://www.brooklyn.edu/" target="_blank" rel="noopener noreferrer"
                             class="hover:opacity-75 transition-opacity">
-                            <img width="1200" height="762" src="assets/brooklyn_logo_white.webp" alt="Brooklyn College Logo"
-                                class="max-h-full max-w-full object-contain" loading="lazy">
+                            <img width="1200" height="762" src="assets/brooklyn_logo_white.webp"
+                                alt="Brooklyn College Logo" class="max-h-full max-w-full object-contain" loading="lazy">
                         </a>
                     </div>
                     <div class="h-7 md:h-9 w-auto max-w-[130px] flex items-center justify-center shrink-0">
                         <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener noreferrer"
                             class="hover:opacity-75 transition-opacity">
-                            <img width="1200" height="171" src="assets/NYUTandon_ShortLogo_White.webp" alt="NYU Tandon Logo"
-                                class="max-h-full max-w-full object-contain" loading="lazy">
+                            <img width="1200" height="171" src="assets/NYUTandon_ShortLogo_White.webp"
+                                alt="NYU Tandon Logo" class="max-h-full max-w-full object-contain" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -1501,25 +1710,51 @@
         </div>
     </footer>
 
+    <!-- Profile Modal -->
+    <div id="profileModalOverlay" hidden
+        class="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center opacity-0 invisible pointer-events-none transition-all duration-300"
+        role="dialog" aria-modal="true" aria-label="Trainer Profile View">
+        <button id="profileModalClose" type="button"
+            class="absolute top-6 right-6 text-white hover:text-[#F2A900] transition-colors z-[101]"
+            aria-label="Close profile">
+            <span class="material-symbols-outlined text-4xl" aria-hidden="true">close</span>
+        </button>
+
+        <div id="profileModalContent" class="bg-surface-container rounded-3xl p-8 md:p-12 max-w-2xl w-[90vw] max-h-[85vh] overflow-y-auto shadow-2xl relative pointer-events-none transition-all duration-300 scale-95 opacity-0 flex flex-col sm:flex-row gap-8 items-start mx-auto mt-4 sm:mt-0">
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shrink-0 border-[3px] border-white shadow-md bg-surface-container-highest mx-auto sm:mx-0">
+                <img id="profileModalImg" src="" alt="Profile picture" class="w-full h-full object-cover error-hidden" style="display: none;">
+            </div>
+            <div class="text-center sm:text-left flex-1">
+                <h3 id="profileModalName" class="text-2xl md:text-3xl font-black text-primary mb-2"></h3>
+                <div id="profileModalTitle" class="text-secondary font-bold tracking-widest text-xs uppercase mb-6"></div>
+                <div id="profileModalBio" class="text-on-surface-variant text-base leading-relaxed space-y-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox Modal -->
     <div id="lightboxOverlay" hidden
         class="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300"
         role="dialog" aria-modal="true" aria-label="Image gallery fullscreen view">
         <button id="lightboxClose" type="button"
-            class="absolute top-6 right-6 text-white hover:text-[#F2A900] transition-colors z-[101]" aria-label="Close gallery">
+            class="absolute top-6 right-6 text-white hover:text-[#F2A900] transition-colors z-[101]"
+            aria-label="Close gallery">
             <span class="material-symbols-outlined text-4xl" aria-hidden="true">close</span>
         </button>
 
         <!-- Navigation Arrows -->
         <button id="prevBtn" type="button"
-            class="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group" aria-label="Previous image">
-            <span
-                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform" aria-hidden="true">&lt;</span>
+            class="absolute left-4 md:left-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group"
+            aria-label="Previous image">
+            <span class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform"
+                aria-hidden="true">&lt;</span>
         </button>
         <button id="nextBtn" type="button"
-            class="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group" aria-label="Next image">
-            <span
-                class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform" aria-hidden="true">&gt;</span>
+            class="absolute right-4 md:right-8 text-white/50 hover:text-white transition-colors z-[101] p-4 group"
+            aria-label="Next image">
+            <span class="text-4xl md:text-6xl font-light transform group-active:scale-90 transition-transform"
+                aria-hidden="true">&gt;</span>
         </button>
 
         <img id="lightboxImg" src="" alt="Lightbox image view" loading="lazy" decoding="async"
@@ -1532,4 +1767,3 @@
 </body>
 
 </html>
-

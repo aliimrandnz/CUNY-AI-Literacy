@@ -360,7 +360,33 @@ function openProfileModal(name, title, imgSrc, bio) {
     if (profileModalOverlay) {
         profileModalOverlay.removeAttribute('hidden');
         
-        if (profileModalImg) profileModalImg.src = imgSrc;
+        if (profileModalImg) {
+            // FIX: Prevent cached images from remaining hidden.
+            // Clear previous states before setting new src.
+            profileModalImg.style.display = 'none';
+            profileModalImg.classList.add('error-hidden');
+            delete profileModalImg.dataset.errorHandled;
+            
+            profileModalImg.src = imgSrc;
+            
+            // Check if image is already complete (common for cached images)
+            if (profileModalImg.complete) {
+                profileModalImg.style.display = 'block';
+                profileModalImg.classList.remove('error-hidden');
+            } else {
+                profileModalImg.onload = () => {
+                    profileModalImg.style.display = 'block';
+                    profileModalImg.classList.remove('error-hidden');
+                };
+                
+                // Keep the error-hidden logic robust
+                profileModalImg.onerror = () => {
+                    profileModalImg.style.display = 'none';
+                    profileModalImg.classList.add('error-hidden');
+                    profileModalImg.dataset.errorHandled = 'true';
+                };
+            }
+        }
         if (profileModalName) profileModalName.textContent = name;
         if (profileModalTitle) profileModalTitle.innerHTML = title;
         if (profileModalBio) profileModalBio.innerHTML = bio;
