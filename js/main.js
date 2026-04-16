@@ -362,7 +362,7 @@ function openProfileModal(name, title, imgSrc, bio) {
         
         if (profileModalImg) profileModalImg.src = imgSrc;
         if (profileModalName) profileModalName.textContent = name;
-        if (profileModalTitle) profileModalTitle.textContent = title;
+        if (profileModalTitle) profileModalTitle.innerHTML = title;
         if (profileModalBio) profileModalBio.innerHTML = bio;
         
         // Use timeout to allow rendering before setting opacity for transition
