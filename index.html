@@ -79,10 +79,12 @@
         .trainer-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .trainer-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 25px -5px rgba(0, 33, 111, 0.1), 0 10px 10px -5px rgba(0, 33, 111, 0.04) !important;
         }
+
         .view-spotlight-btn {
             border: none;
             color: white;
@@ -102,20 +104,29 @@
             margin-top: auto;
             width: fit-content;
         }
-        .view-spotlight-btn:hover, .view-spotlight-btn:focus {
+
+        .view-spotlight-btn:hover,
+        .view-spotlight-btn:focus {
             background: #00216F;
             color: white;
             text-decoration: none !important;
             transform: scale(1.02);
             outline: none;
         }
+
         #profileModalBio p {
             margin-bottom: 1rem;
         }
+
         #profileModalBio p:last-child {
             margin-bottom: 0;
         }
-        #sessions, #highlights, #faq, #train-the-trainer, #innovation-hub {
+
+        #sessions,
+        #highlights,
+        #faq,
+        #train-the-trainer,
+        #innovation-hub {
             scroll-margin-top: 100px;
         }
     </style>
@@ -1015,60 +1026,79 @@
         <section class="py-40 md:py-48 bg-background relative z-40" id="train-the-trainer">
             <div class="max-w-5xl mx-auto px-6 lg:px-8">
                 <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Train-the-Trainer Spotlights</h2>
+                    <h2 class="text-4xl md:text-5xl font-black text-primary tracking-tighter">Train-the-Trainer
+                        Spotlights</h2>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12">
                     <!-- Trainer 1: Ali Imran Deniz -->
-                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
-                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                            <img width="1200" height="1200" src="assets/trainer_highlights/Ali_Deniz.webp" alt="Ali Imran Deniz" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    <div
+                        class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div
+                            class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Ali_Deniz.webp"
+                                alt="Ali Imran Deniz" loading="lazy" decoding="async"
+                                class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Ali Imran Deniz</h3>
-                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Data Analytics Student, Brooklyn College <br> Lead Developer and Event Coordinator</div>
-                        <button type="button" class="profile-trigger view-spotlight-btn" 
-                            data-name="Ali Imran Deniz" 
-                            data-title="Data Analytics Student, Brooklyn College &lt;br&gt; Lead Developer and Event Coordinator" 
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Data
+                            Analytics Student, Brooklyn College <br> Lead Developer and Event Coordinator</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" data-name="Ali Imran Deniz"
+                            data-title="Data Analytics Student, Brooklyn College &lt;br&gt; Lead Developer and Event Coordinator"
                             data-img="assets/trainer_highlights/Ali_Deniz.webp"
-                            data-bio="&lt;p&gt;Ali's journey reflects the transformative power of applied AI learning. When he joined the program, he was still exploring how AI could fit into his academic and professional path. Through the bootcamps, he quickly adopted AI tools as a creative and technical partner.&lt;/p&gt;&lt;p&gt;Within a short period of time, he independently taught himself new skills and built the full professional website for the CUNY AI Literacy and Professional Readiness Series. The platform now serves as a central hub for events, student engagement, and program visibility across CUNY.&lt;/p&gt;&lt;p&gt;Ali did not just learn and build. This May, he steps into the role of workshop host, leading his own AI session titled &quot;AI-Assisted Web Development: From Prompt to Production&quot; and sharing what he built directly with other students. His path from first-time participant to developer to educator shows what becomes possible when AI literacy is applied with purpose and confidence.&lt;/p&gt;">View Spotlight</button>
+                            data-bio="&lt;p&gt;Ali's journey reflects the transformative power of applied AI learning. When he joined the program, he was still exploring how AI could fit into his academic and professional path. Through the bootcamps, he quickly adopted AI tools as a creative and technical partner.&lt;/p&gt;&lt;p&gt;Within a short period of time, he independently taught himself new skills and built the full professional website for the CUNY AI Literacy and Professional Readiness Series. The platform now serves as a central hub for events, student engagement, and program visibility across CUNY.&lt;/p&gt;&lt;p&gt;Ali did not just learn and build. This May, he steps into the role of workshop host, leading his own AI session titled &quot;AI-Assisted Web Development: From Prompt to Production&quot; and sharing what he built directly with other students. His path from first-time participant to developer to educator shows what becomes possible when AI literacy is applied with purpose and confidence.&lt;/p&gt;">View
+                            Spotlight</button>
                     </div>
                     <!-- Trainer 2: Tülay Altın -->
-                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
-                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                            <img width="1200" height="1200" src="assets/trainer_highlights/Tulay_altin.jpeg" alt="Tulay Altin" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    <div
+                        class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div
+                            class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Tulay_altin.jpeg"
+                                alt="Tulay Altin" loading="lazy" decoding="async" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Tulay Altin</h3>
-                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">MA Candidate in Digital Humanities, CUNY Graduate Center</div>
-                        <button type="button" class="profile-trigger view-spotlight-btn" 
-                            data-name="Tulay Altin" 
-                            data-title="MA Candidate in Digital Humanities, CUNY Graduate Center" 
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">MA
+                            Candidate in Digital Humanities, CUNY Graduate Center</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" data-name="Tulay Altin"
+                            data-title="MA Candidate in Digital Humanities, CUNY Graduate Center"
                             data-img="assets/trainer_highlights/Tulay_altin.jpeg"
-                            data-bio="&lt;p&gt;Tülay is one of the most dedicated participants in the CUNY AI Literacy and Professional Readiness Series. She attended every session and earned all available badges, demonstrating both consistency and commitment to mastering AI literacy.&lt;/p&gt;&lt;p&gt;Building on her interdisciplinary background in digital humanities and teaching, she is now developing a beginner-level micro-credential focused on AI for behavioral health professionals. Her work explores how AI can support practitioners in understanding, communicating, and delivering care more effectively.&lt;/p&gt;&lt;p&gt;What began as a learning journey has become a teaching mission. Tülay is now creating educational pathways for others, extending the reach of AI literacy into specialized professional fields beyond the classroom.&lt;/p&gt;">View Spotlight</button>
+                            data-bio="&lt;p&gt;Tülay is one of the most dedicated participants in the CUNY AI Literacy and Professional Readiness Series. She attended every session and earned all available badges, demonstrating both consistency and commitment to mastering AI literacy.&lt;/p&gt;&lt;p&gt;Building on her interdisciplinary background in digital humanities and teaching, she is now developing a beginner-level micro-credential focused on AI for behavioral health professionals. Her work explores how AI can support practitioners in understanding, communicating, and delivering care more effectively.&lt;/p&gt;&lt;p&gt;What began as a learning journey has become a teaching mission. Tülay is now creating educational pathways for others, extending the reach of AI literacy into specialized professional fields beyond the classroom.&lt;/p&gt;">View
+                            Spotlight</button>
                     </div>
                     <!-- Trainer 3: Damir Shavkatov -->
-                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
-                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                            <img width="1200" height="1200" src="assets/trainer_highlights/Damir.webp" alt="Damir Shavkatov" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    <div
+                        class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div
+                            class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Damir.webp"
+                                alt="Damir Shavkatov" loading="lazy" decoding="async"
+                                class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Damir Shavkatov</h3>
-                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Psychology Major, Brooklyn College <br> Vice Chair for Senior College Affairs, USS</div>
-                        <button type="button" class="profile-trigger view-spotlight-btn" 
-                            data-name="Damir Shavkatov" 
-                            data-title="Psychology Major, Brooklyn College &lt;br&gt; Vice Chair for Senior College Affairs, USS" 
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">
+                            Psychology Major, Brooklyn College <br> Vice Chair for Senior College Affairs, USS</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" data-name="Damir Shavkatov"
+                            data-title="Psychology Major, Brooklyn College &lt;br&gt; Vice Chair for Senior College Affairs, USS"
                             data-img="assets/trainer_highlights/Damir.webp"
-                            data-bio="&lt;p&gt;Damir began as a participant in the LinkedIn improvement workshop on personal branding and quickly became one of the program's most active contributors. He transitioned into a peer mentor role, guiding fellow students on LinkedIn optimization, digital presence, career positioning, and research projects.&lt;/p&gt;&lt;p&gt;His academic impact extended further when he co-authored a research paper with Professor Pham titled &quot;How Accessible Public Universities Can Enhance Social Mobility Through Comprehensive Support Services,&quot; published in the Northeast Journal of Legal Studies (Feb 2026). He also serves as a research mentor for peers, helping students develop their own scholarly work.&lt;/p&gt;&lt;p&gt;As a first-generation student and campus leader, Damir represented CUNY students at the United Nations Youth Conference in April 2026 and was selected for the Bloomberg x Basta mentoring program. He took what he learned and immediately put it to work for others, on campus, in CUNY and on a global stage.&lt;/p&gt;">View Spotlight</button>
+                            data-bio="&lt;p&gt;Damir began as a participant in the LinkedIn improvement workshop on personal branding and quickly became one of the program's most active contributors. He transitioned into a peer mentor role, guiding fellow students on LinkedIn optimization, digital presence, career positioning, and research projects.&lt;/p&gt;&lt;p&gt;His academic impact extended further when he co-authored a research paper with Professor Pham titled &quot;How Accessible Public Universities Can Enhance Social Mobility Through Comprehensive Support Services,&quot; published in the Northeast Journal of Legal Studies (Feb 2026). He also serves as a research mentor for peers, helping students develop their own scholarly work.&lt;/p&gt;&lt;p&gt;As a first-generation student and campus leader, Damir represented CUNY students at the United Nations Youth Conference in April 2026 and was selected for the Bloomberg x Basta mentoring program. He took what he learned and immediately put it to work for others, on campus, in CUNY and on a global stage.&lt;/p&gt;">View
+                            Spotlight</button>
                     </div>
                     <!-- Trainer 4: Jason Lin -->
-                    <div class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
-                        <div class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
-                            <img width="1200" height="1200" src="assets/trainer_highlights/Jason.webp" alt="Jason Lin" loading="lazy" decoding="async" class="w-full h-full object-cover">
+                    <div
+                        class="trainer-card bg-surface-container rounded-3xl p-10 shadow-sm border border-outline-variant/20 flex flex-col h-full items-center text-center">
+                        <div
+                            class="mx-auto w-24 h-24 md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-6 border-[3px] md:border-[4px] border-white shadow-sm bg-surface-container-highest flex items-center justify-center shrink-0">
+                            <img width="1200" height="1200" src="assets/trainer_highlights/Jason.webp" alt="Jason Lin"
+                                loading="lazy" decoding="async" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold text-primary mb-2">Jason Lin</h3>
-                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">Business Administration Student, Brooklyn College</div>
-                        <button type="button" class="profile-trigger view-spotlight-btn" 
-                            data-name="Jason Lin" 
-                            data-title="Business Administration Student, Brooklyn College" 
+                        <div class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 text-balance">
+                            Business Administration Student, Brooklyn College</div>
+                        <button type="button" class="profile-trigger view-spotlight-btn" data-name="Jason Lin"
+                            data-title="Business Administration Student, Brooklyn College"
                             data-img="assets/trainer_highlights/Jason.webp"
-                            data-bio="&lt;p&gt;Jason has always believed that if you can figure something out, you have a responsibility to help others do the same. As a first-year student at Brooklyn College, he created a YouTube tutoring series for his marketing simulation class that earned thousands of views from classmates and students well beyond campus. That instinct to share what he knows did not stop there.&lt;/p&gt;&lt;p&gt;As a dedicated participant in the CUNY AI Literacy and Professional Readiness Series, Jason attended sessions consistently and provided detailed, thoughtful feedback after each one. His observations helped sharpen the structure and delivery of the program itself. He then took that engagement a step further, becoming a research mentor for peers alongside Damir Shavkatov, guiding fellow students through their own scholarly work.&lt;/p&gt;&lt;p&gt;In Spring 2026, Jason co-received the Tow Undergraduate Research Grant alongside Professor Pham to study how AI bootcamps shape student learning, AI literacy, and career readiness across CUNY. A student who once helped classmates finish a simulation is now helping define what AI education should look like for an entire generation of public university students.&lt;/p&gt;">View Spotlight</button>
+                            data-bio="&lt;p&gt;Jason has always believed that if you can figure something out, you have a responsibility to help others do the same. As a first-year student at Brooklyn College, he created a YouTube tutoring series for his marketing simulation class that earned thousands of views from classmates and students well beyond campus. That instinct to share what he knows did not stop there.&lt;/p&gt;&lt;p&gt;As a dedicated participant in the CUNY AI Literacy and Professional Readiness Series, Jason attended sessions consistently and provided detailed, thoughtful feedback after each one. His observations helped sharpen the structure and delivery of the program itself. He then took that engagement a step further, becoming a research mentor for peers alongside Damir Shavkatov, guiding fellow students through their own scholarly work.&lt;/p&gt;&lt;p&gt;In Spring 2026, Jason co-received the Tow Undergraduate Research Grant alongside Professor Pham to study how AI bootcamps shape student learning, AI literacy, and career readiness across CUNY. A student who once helped classmates finish a simulation is now helping define what AI education should look like for an entire generation of public university students.&lt;/p&gt;">View
+                            Spotlight</button>
                     </div>
                 </div>
             </div>
@@ -1720,13 +1750,17 @@
             <span class="material-symbols-outlined text-4xl" aria-hidden="true">close</span>
         </button>
 
-        <div id="profileModalContent" class="bg-surface-container rounded-3xl p-8 md:p-12 max-w-2xl w-[90vw] max-h-[85vh] overflow-y-auto shadow-2xl relative pointer-events-none transition-all duration-300 scale-95 opacity-0 flex flex-col sm:flex-row gap-8 items-start mx-auto mt-4 sm:mt-0">
-            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shrink-0 border-[3px] border-white shadow-md bg-surface-container-highest mx-auto sm:mx-0">
-                <img id="profileModalImg" src="" alt="Profile picture" class="w-full h-full object-cover error-hidden" style="display: none;">
+        <div id="profileModalContent"
+            class="bg-surface-container rounded-3xl p-8 md:p-12 max-w-2xl w-[90vw] max-h-[85vh] overflow-y-auto shadow-2xl relative pointer-events-none transition-all duration-300 scale-95 opacity-0 flex flex-col sm:flex-row gap-8 items-start mx-auto mt-4 sm:mt-0">
+            <div
+                class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden shrink-0 border-[3px] border-white shadow-md bg-surface-container-highest mx-auto sm:mx-0">
+                <img id="profileModalImg" src="" alt="Profile picture" class="w-full h-full object-cover error-hidden"
+                    style="display: none;">
             </div>
             <div class="text-center sm:text-left flex-1">
                 <h3 id="profileModalName" class="text-2xl md:text-3xl font-black text-primary mb-2"></h3>
-                <div id="profileModalTitle" class="text-secondary font-bold tracking-widest text-xs uppercase mb-6"></div>
+                <div id="profileModalTitle" class="text-secondary font-bold tracking-widest text-xs uppercase mb-6">
+                </div>
                 <div id="profileModalBio" class="text-on-surface-variant text-base leading-relaxed space-y-4">
                 </div>
             </div>
@@ -1762,6 +1796,7 @@
     </div>
 
     <!-- Removed Inline Styles - Migrated to css/input.css -->
+    <!-- backup -->
     <script src="js/main.js"></script>
 
 </body>
