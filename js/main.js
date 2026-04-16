@@ -21,7 +21,7 @@ if (initialActive) {
     setActive(initialActive);
 }
 
-const sections = [{ id: '', el: document.body }, ...['sessions', 'speakers', 'leadership', 'faq'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
+const sections = [{ id: '', el: document.body }, ...['sessions', 'highlights', 'leadership', 'faq'].map(id => ({ id, el: document.getElementById(id) }))].filter(s => s.el);
 
 const mainNav = document.getElementById('mainNav');
 const navContainer = document.getElementById('navContainer');
