@@ -1200,6 +1200,10 @@ video {
   gap: 5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1232,10 +1236,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.self-start {
-  align-self: flex-start;
 }
 
 .overflow-hidden {
@@ -2364,14 +2364,6 @@ a, button, #mobileDrawer a {
 
   .sm\:items-center {
     align-items: center;
-  }
-
-  .sm\:gap-3 {
-    gap: 0.75rem;
-  }
-
-  .sm\:self-auto {
-    align-self: auto;
   }
 
   .sm\:p-6 {
