@@ -13,6 +13,18 @@ function setActive(link) {
     link.classList.add('active', ...activeClasses);
     link.classList.remove(...inactiveClasses);
     link.setAttribute('aria-current', 'page');
+
+    // Sync mobile links without changing desktop markup
+    const targetHref = link.getAttribute('href');
+    document.querySelectorAll('.mobile-nav-link').forEach(ml => {
+        if (ml.getAttribute('href') === targetHref) {
+            ml.classList.remove('text-white/80', 'font-medium');
+            ml.classList.add('text-white', 'font-bold');
+        } else {
+            ml.classList.remove('text-white', 'font-bold');
+            ml.classList.add('text-white/80', 'font-medium');
+        }
+    });
 }
 
 // Set initial active state
@@ -191,7 +203,13 @@ if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMobileMenu);
 
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
+        isScrollingFromClick = true;
+        const targetHref = link.getAttribute('href');
+        const desktopLink = Array.from(navLinks).find(l => l.getAttribute('href') === targetHref);
+        if (desktopLink) setActive(desktopLink);
+        
         if(isMobileMenuOpen) toggleMobileMenu();
+        setTimeout(() => { isScrollingFromClick = false; }, 1000);
     });
 });
 
