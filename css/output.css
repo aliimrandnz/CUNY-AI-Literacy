@@ -2412,6 +2412,10 @@ a, button, #mobileDrawer a {
     right: 2rem;
   }
 
+  .md\:z-40 {
+    z-index: 40;
+  }
+
   .md\:order-1 {
     order: 1;
   }
