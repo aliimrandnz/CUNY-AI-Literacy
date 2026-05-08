@@ -225,6 +225,10 @@ let currentGalleryGroup = [];
 let currentIndex = -1;
 
 function getGalleryGroup(item) {
+    const galleryId = item.getAttribute('data-gallery');
+    if (galleryId) {
+        return Array.from(document.querySelectorAll(`.gallery-item[data-gallery="${galleryId}"]`));
+    }
     const container = item.closest('.grid');
     return container ? Array.from(container.querySelectorAll('.gallery-item')) : [item];
 }
