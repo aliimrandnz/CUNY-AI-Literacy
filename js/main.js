@@ -325,6 +325,19 @@ if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); sho
 if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
 if (lightboxOverlay) lightboxOverlay.addEventListener('click', (e) => { if (e.target === lightboxOverlay) closeLightbox(); });
 
+// Remote Gallery Triggers
+document.querySelectorAll('[data-trigger-gallery]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const galleryId = trigger.getAttribute('data-trigger-gallery');
+        // Find the first gallery item that isn't a trigger itself
+        const firstItem = document.querySelector(`.gallery-item[data-gallery="${galleryId}"]:not([data-trigger-gallery])`);
+        if (firstItem) {
+            firstItem.click();
+        }
+    });
+});
+
 // Keyboard Listeners
 document.addEventListener('keydown', (e) => {
     // 1. Lightbox handling
